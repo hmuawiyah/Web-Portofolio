@@ -35,9 +35,14 @@ const Experience = () => {
                 <div className="font-semibold text-2xl mb-4">Experiences</div>
                 <div className="flex flex-col md:flex-row w-full gap-5">
                     <Card className="w-full md:w-[60%] h-fit">
-                        <CardHeader className="flex justify-between gap-0">
+                        <CardHeader>
+                            <div className="flex justify-between text-sm uppercase gap-0">
+                                <p>Impro Studio Jakarta</p>
+                                <p>2023-2025</p>
+                            </div>
+                            {/* </CardHeader>
+                        <CardHeader> */}
                             <CardTitle className="text-4xl text-[#fe4a23] font-display font-[400] uppercase">Junior Graphic<br />Designer</CardTitle>
-                            <p>2023-2025</p>
                         </CardHeader>
                         <CardContent>
                             {textContent}

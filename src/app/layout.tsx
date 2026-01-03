@@ -25,13 +25,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="format-detection" content="telephone=no" />
+      </head>
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-100/50`}
       >
         <Navbar />
         <div className="flex flex-col items-center min-h-screen mx-10 lg:mx-50 pt-13">
-          
-            {children}
+
+          {children}
 
         </div>
       </body>

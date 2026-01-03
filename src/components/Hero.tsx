@@ -7,7 +7,8 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
-import { FaLaptopCode, FaPaintBrush } from "react-icons/fa"
+import { FaLaptopCode, FaPaintBrush, FaMapMarkerAlt } from "react-icons/fa"
+// import { FaMapMarkerAlt } from "react-icons/fa"
 import { BiSolidJoystick } from "react-icons/bi"
 import { RiFootballFill } from "react-icons/ri"
 
@@ -17,7 +18,7 @@ const Highlight = ({ children }
     }>) => {
 
     return (
-        <div className="flex items-center rounded-md bg-muted px-4 py-2 text-sm gap-1 md:gap-2">
+        <div className="flex items-center rounded-md border bg-muted px-4 py-2 text-sm gap-1 md:gap-2">
             {children}
         </div>
     )
@@ -32,17 +33,26 @@ const Hero = () => {
     return (
         <div className="flex justify-center gap-5 w-full lg:w-[80%]">
             <div className="
+                relative
                 hidden md:flex justify-center items-center border shadow-sm
-                bg-linear-to-t from-[#c7ff0480] from-0% to-transparent to-80% 
                 rounded-xl w-[25%] h-auto
             ">
-                IMG
+                <div className="absolute inset-0 bg-[url(/me-2.jpg)] bg-cover bg-top rounded-xl"></div>
+                <div className="absolute inset-0 bg-linear-to-t from-black/30 from-0% to-transparent to-80% rounded-xl"></div>
+                {/* <div className="absolute inset-0 bg-linear-to-t from-[#fe4a23] from-0% to-transparent to-80% rounded-xl"></div> */}
+                {/* <div className="absolute inset-0 bg-linear-to-t from-[#c7ff0430] from-0% to-transparent to-80% rounded-xl"></div> */}
             </div>
             <div className="flex flex-col w-full lg:w-[75%] gap-5">
                 <Card >
                     <CardHeader className="gap-0">
                         <CardTitle className="text-4xl font-display font-[400] text-[#fe4a23] uppercase">Husein Muawiyah</CardTitle>
-                        <CardDescription className="text-lg">Junior Web Developer</CardDescription>
+                        <div className="flex flex-wrap gap-3 mt-2">
+                            <CardDescription className="text-lg">Junior Web Developer</CardDescription>
+                            <CardDescription className="
+                                flex justify-center items-center text-xs py-1 px-3 rounded-md
+                                bg-gray-100 border text-black/80
+                            "><FaMapMarkerAlt className="text-xs mr-1" />Bekasi</CardDescription>
+                        </div>
                     </CardHeader>
                     <CardContent>
                         {textContent}
