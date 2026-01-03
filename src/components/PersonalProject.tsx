@@ -16,18 +16,21 @@ const PersonalProject = () => {
         {
             title: "EasyTask",
             desc: "Task Management",
+            img: "/TASKNEST-SS.jpg",
             linkDetail: "/",
             linkOpen: "/"
         },
         {
             title: "Crumbly",
             desc: "Online Shop",
-            linkDetail: "/",
+            img: "/",
+            linkDetail: "/Crumbly-SS.jpg",
             linkOpen: "/"
         },
         {
             title: "Voltora",
             desc: "Power Calculator",
+            img: "/",
             linkDetail: "/",
             linkOpen: "/"
         },
@@ -51,7 +54,7 @@ const PersonalProject = () => {
 
                         <CardContent className="relative flex h-full items-end pb-0 overflow-hidden">
                             <div
-                                className="absolute inset-0 bg-cover bg-top bg-[url(/Crumbly-SS.jpg)] rounded-b-xl"
+                                className={`absolute inset-0 bg-cover bg-top bg-[url(${val.img})] rounded-b-xl`}
                             />
 
                             <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/30 to-transparent rounded-b-xl" />
