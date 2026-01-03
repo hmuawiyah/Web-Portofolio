@@ -55,21 +55,21 @@ const GetInTouch = () => {
     return (
         <div className="w-full md:w-[80%]">
             <div className="font-semibold text-2xl mb-4">Get in touch</div>
-            <div className="flex flex-wrap md:flex-nowrap justify-between gap-5">
+            <div className="flex flex-wrap lg:flex-nowrap justify-between gap-5">
 
-                <div className="w-full md:w-1/4 h-15">
+                <div className="w-full md:w-[48%] lg:w-1/4 h-15">
                     <ButtonGetInTouch><SiLinkedin /> Linkedin</ButtonGetInTouch>
                 </div>
-                <div className="w-full md:w-1/4 h-15">
+                <div className="w-full md:w-[48%] lg:w-1/4 h-15">
                     <ButtonGetInTouch><SiGithub />Github</ButtonGetInTouch>
                 </div>
-                <div className="w-full md:w-1/4 h-15">
+                <div className="w-full md:w-[48%] lg:w-1/4 h-15">
                     <ButtonGetInTouch><ImBehance2 />Behance</ButtonGetInTouch>
                 </div>
-                <div className="w-full md:w-1/4 h-15">
+                <div className="w-full md:w-[48%] lg:w-1/4 h-15">
                     <ButtonGetInTouch><RiInstagramFill className="text-2xl md:text-3xl" />Instagram</ButtonGetInTouch>
                 </div>
-                {/* <div className="w-full md:w-1/4 h-15">
+                {/* <div className="w-full md:w-1/2 lg:w-1/4 h-15">
                     <ButtonGetInTouch><HiMail className="text-3xl" />Email</ButtonGetInTouch>
                 </div> */}
 

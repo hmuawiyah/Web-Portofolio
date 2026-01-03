@@ -41,7 +41,7 @@ const Certificate = () => {
         },
         {
             title: "Junior Web Programmer",
-            org: "Badan Nasional Sertifikasi Profesi (BNSP)",
+            org: "Badan Nasional Sertifikasi Profesi",
             year: "Sep 2023",
             id: "No. 62019 2514 5 0009980 2023",
         },
@@ -82,18 +82,18 @@ const Certificate = () => {
             ${isMore ? "h-[900] md:h-[425]" : "h-[150]"}`}>
 
                 {data.map((val, i) => (
-                    <Card key={i} className="w-full md:w-[48.7%] h-fit gap-0 py-4">
+                    <Card key={i} className="w-full md:w-[47.9%] xl:w-[48.7%] h-fit gap-0 py-4">
                         <CardHeader className="flex justify-between">
-                            <CardTitle className="text-base text-[#fe4a23] font-semibold uppercase truncate">{val.title}</CardTitle>
+                            <CardTitle className="text-sm xl:text-base text-[#fe4a23] font-semibold uppercase truncate">{val.title}</CardTitle>
                         </CardHeader>
                         <CardContent>
-                            <div className="mb-4">
+                            <div className="text-sm xl:text-base mb-4">
                                 {val.org} ({val.year})
                             </div>
-                            <span className="mr-2 text-black/50">
+                            <span className="text-sm xl:text-base mr-2 text-black/50">
                                 Credential ID:
                             </span>
-                            <span className="text-black/50">
+                            <span className="text-sm xl:text-base text-black/50">
                                 {val.url
                                     ? (
                                         <Link href={val.url} target="_blank" className="underline">
@@ -112,8 +112,8 @@ const Certificate = () => {
             </div>
 
             <div className="flex justify-center w-full ">
-                <Button variant={'neon'} onClick={() => setIsMore(!isMore)} 
-                className="mt-5">
+                <Button variant={'neon'} onClick={() => setIsMore(!isMore)}
+                    className="mt-5">
                     {isMore
                         ? "See less"
                         : "See more"

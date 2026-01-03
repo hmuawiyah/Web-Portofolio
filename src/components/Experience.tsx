@@ -17,7 +17,7 @@ const Highlight = ({ children }
     }>) => {
 
     return (
-        <div className="rounded-md bg-muted p-2 text-base md:text-xl">
+        <div className="rounded-md bg-muted p-2 text-base xl:text-xl">
             {children}
         </div>
     )
@@ -33,8 +33,8 @@ const Experience = () => {
         <>
             <div className="w-full md:w-[80%]">
                 <div className="font-semibold text-2xl mb-4">Experiences</div>
-                <div className="flex flex-col md:flex-row w-full gap-5">
-                    <Card className="w-full md:w-[60%] h-fit">
+                <div className="flex flex-col lg:flex-row w-full gap-5">
+                    <Card className="w-full lg:w-[55%] xl:w-[60%] h-fit">
                         <CardHeader>
                             <div className="flex justify-between text-sm uppercase gap-0">
                                 <p>Impro Studio Jakarta</p>
@@ -48,7 +48,7 @@ const Experience = () => {
                             {textContent}
                         </CardContent>
                     </Card>
-                    <div className="flex flex-wrap md:flex-nowrap flex-row md:flex-col w-full md:w-[40%] gap-5">
+                    <div className="flex flex-wrap lg:flex-nowrap flex-row md:flex-col w-full lg:w-[45%] xl:w-[40%] gap-5">
                         <Card className="py-3 w-full">
                             <CardContent className="flex justify-between items-center">
                                 <span className="text-sm"> Front End </span>

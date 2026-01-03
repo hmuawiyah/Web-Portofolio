@@ -31,11 +31,11 @@ const Hero = () => {
     basics and on-page SEO, and actively builds real-world projects.`
 
     return (
-        <div className="flex justify-center gap-5 w-full lg:w-[80%]">
+        <div className="flex justify-center gap-5 w-full md:w-[80%]">
             <div className="
                 relative
                 hidden md:flex justify-center items-center border shadow-sm
-                rounded-xl w-[25%] h-auto
+                rounded-xl w-[40%] xl:w-[22.5%] h-fit aspect-3/4
             ">
                 <div className="absolute inset-0 bg-[url(/me-2.jpg)] bg-cover bg-top rounded-xl"></div>
                 <div className="absolute inset-0 bg-linear-to-t from-black/30 from-0% to-transparent to-80% rounded-xl"></div>
@@ -59,8 +59,8 @@ const Hero = () => {
                     </CardContent>
                 </Card>
                 <Card className="py-3">
-                    <CardContent className="flex flex-col md:flex-row justify-between items-start md:items-center">
-                        <span className="mb-2 md:mb-0"> Interest </span>
+                    <CardContent className="flex flex-col xl:flex-row justify-between items-start xl:items-center">
+                        <span className="mb-2 xl:mb-0"> Interest </span>
                         <div className="flex flex-wrap items-center gap-3">
                             <Highlight><FaLaptopCode />Programming</Highlight>
                             <Highlight><FaPaintBrush />Design</Highlight>
