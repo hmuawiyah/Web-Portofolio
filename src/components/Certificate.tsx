@@ -76,7 +76,7 @@ const Certificate = () => {
     ]
 
     return (
-        <div className="w-full md:w-[80%]">
+        <div id="certificate" className="w-full md:w-[80%]">
             <div className="font-semibold text-2xl mb-4">Certificates</div>
             <div className={`flex flex-wrap justify-between w-full gap-5 overflow-hidden transition-all duration-300 ease-in-out
             ${isMore ? "h-[900] md:h-[425]" : "h-[150]"}`}>

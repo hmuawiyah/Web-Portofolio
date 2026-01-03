@@ -37,7 +37,7 @@ const PersonalProject = () => {
     ]
 
     return (
-        <div className="w-full md:w-[80%]">
+        <div id="project" className="w-full md:w-[80%]">
             <div className="font-semibold text-2xl mb-4">Personal Project</div>
             <div className="flex flex-col flex-wrap lg:flex-nowrap md:flex-row gap-5">
                 {data.map((val, i) => (

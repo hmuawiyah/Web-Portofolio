@@ -30,8 +30,8 @@ const Experience = () => {
     and designed custom Canva templates to boost team efficiency and brand consistency.`
 
     return (
-        <>
-            <div className="w-full md:w-[80%]">
+        // <>
+            <div id="experience" className="w-full md:w-[80%]">
                 <div className="font-semibold text-2xl mb-4">Experiences</div>
                 <div className="flex flex-col lg:flex-row w-full gap-5">
                     <Card className="w-full lg:w-[55%] xl:w-[60%] h-fit">
@@ -86,7 +86,7 @@ const Experience = () => {
                     </div>
                 </div>
             </div>
-        </>
+        // </>
     )
 }
 

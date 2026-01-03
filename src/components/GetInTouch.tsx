@@ -14,6 +14,7 @@ import { ImBehance2 } from "react-icons/im"
 import { HiMail } from "react-icons/hi"
 import { FaInstagramSquare } from "react-icons/fa"
 import { RiInstagramFill } from "react-icons/ri"
+import Link from "next/link"
 
 const ButtonGetInTouch = ({ children }
     : Readonly<{
@@ -33,41 +34,49 @@ const ButtonGetInTouch = ({ children }
 }
 
 const GetInTouch = () => {
-    const data = [
-        {
-            name: "Linkedin",
-            link: ""
-        },
-        {
-            name: "Github",
-            link: ""
-        },
-        {
-            name: "Behance",
-            link: ""
-        },
-        {
-            name: "Email",
-            link: ""
-        },
-    ]
+    // const data = [
+    //     {
+    //         name: "Linkedin",
+    //         link: "https://www.linkedin.com/in/husein-muawiyah/"
+    //     },
+    //     {
+    //         name: "Github",
+    //         link: "https://github.com/hmuawiyah"
+    //     },
+    //     {
+    //         name: "Behance",
+    //         link: "https://www.behance.net/huseinmuawiyah"
+    //     },
+    //     {
+    //         name: "Email",
+    //         link: "huseinmuawiyah@gmail.com"
+    //     },
+    // ]
 
     return (
-        <div className="w-full md:w-[80%]">
+        <div id="getInTouch" className="w-full md:w-[80%]">
             <div className="font-semibold text-2xl mb-4">Get in touch</div>
             <div className="flex flex-wrap lg:flex-nowrap justify-between gap-5">
 
-                <div className="w-full md:w-[48%] lg:w-1/4 h-15">
+                <div className="w-full md:w-[48%] lg:w-1/4 h-15" >
+                <Link href={'https://www.linkedin.com/in/husein-muawiyah/'} target="_blank">
                     <ButtonGetInTouch><SiLinkedin /> Linkedin</ButtonGetInTouch>
+                </Link>
                 </div>
                 <div className="w-full md:w-[48%] lg:w-1/4 h-15">
+                <Link href={'https://github.com/hmuawiyah'} target="_blank">
                     <ButtonGetInTouch><SiGithub />Github</ButtonGetInTouch>
+                </Link>
                 </div>
                 <div className="w-full md:w-[48%] lg:w-1/4 h-15">
+                <Link href={'https://www.behance.net/huseinmuawiyah'} target="_blank">
                     <ButtonGetInTouch><ImBehance2 />Behance</ButtonGetInTouch>
+                </Link>
                 </div>
                 <div className="w-full md:w-[48%] lg:w-1/4 h-15">
+                <Link href={'https://www.instagram.com/huseinmuawiyah/'} target="_blank">
                     <ButtonGetInTouch><RiInstagramFill className="text-2xl md:text-3xl" />Instagram</ButtonGetInTouch>
+                </Link>
                 </div>
                 {/* <div className="w-full md:w-1/2 lg:w-1/4 h-15">
                     <ButtonGetInTouch><HiMail className="text-3xl" />Email</ButtonGetInTouch>
