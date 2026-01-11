@@ -31,7 +31,7 @@ const Experience = () => {
 
     return (
         // <>
-            <div id="experience" className="w-full md:w-[80%]">
+            <div  className="w-full md:w-[80%]">
                 <div className="font-semibold text-2xl mb-4">Experiences</div>
                 <div className="flex flex-col lg:flex-row w-full gap-5">
                     <Card className="w-full lg:w-[55%] xl:w-[60%] h-fit">

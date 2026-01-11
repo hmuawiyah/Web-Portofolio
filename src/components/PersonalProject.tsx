@@ -30,14 +30,14 @@ const PersonalProject = () => {
         {
             title: "Voltora",
             desc: "Power Calculator",
-            img: "/",
-            linkDetail: "#",
-            linkOpen: "#"
+            img: "/Voltora-SS.jpg",
+            linkDetail: "https://github.com/hmuawiyah/VOLTORA-Web-App-Power-Calculator",
+            linkOpen: "https://voltora-calculator.vercel.app/"
         },
     ]
 
     return (
-        <div id="project" className="w-full md:w-[80%]">
+        <div className="w-full md:w-[80%]">
             <div className="font-semibold text-2xl mb-4">Personal Project</div>
             <div className="flex flex-col flex-wrap lg:flex-nowrap md:flex-row gap-5">
                 {data.map((val, i) => (
@@ -65,7 +65,7 @@ const PersonalProject = () => {
                             <div className="relative z-10 flex w-full gap-2 pb-4">
                                 <Link href={val.linkDetail} target="_blank" className="w-1/2">
                                     <Button variant="outlineNew" className="w-full">
-                                        Detail
+                                        Github
                                     </Button>
                                 </Link>
                                 <Link href={val.linkOpen} target="_blank" className="w-1/2">

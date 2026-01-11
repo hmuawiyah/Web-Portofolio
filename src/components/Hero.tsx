@@ -31,7 +31,7 @@ const Hero = () => {
     basics and on-page SEO, and actively builds real-world projects.`
 
     return (
-        <div id="home" className="flex justify-center gap-5 w-full md:w-[80%]">
+        <div className="flex justify-center gap-5 w-full md:w-[80%]">
             <div className="
                 relative
                 hidden md:flex justify-center items-center border shadow-sm

@@ -7,15 +7,19 @@ import PersonalProject from "@/components/PersonalProject";
 export default function Home() {
   return (
     <>
-      <div className="my-10"></div>
+      <div id="home" className="mb-20"></div>
       <Hero />
-      <div className="my-10"></div>
+
+      <div id="experience" className="mb-20"></div>
       <Experience />
-      <div className="my-10"></div>
+
+      <div id="certificate" className="mb-20"></div>
       <Certificate />
-      <div className="my-10"></div>
+
+      <div id="project" className="mb-20"></div>
       <PersonalProject />
-      <div className="my-10"></div>
+
+      <div id="getInTouch" className="mb-20"></div>
       <GetInTouch />
 
       <div className="mb-30"></div>
