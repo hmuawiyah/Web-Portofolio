@@ -8,12 +8,12 @@ import {
     CardTitle,
 } from "@/components/ui/card"
 
-import { SiAdobephotoshop, SiAdobeillustrator, SiFigma, SiMongodb, SiExpress, SiPostgresql, SiPrisma, SiAdobelightroomclassic, SiTypescript } from "react-icons/si";
+import { SiAdobephotoshop, SiAdobeillustrator, SiFigma, SiMongodb, SiExpress, SiPostgresql, SiPrisma, SiAdobelightroomclassic, SiTypescript } from "react-icons/si"
 import { RiNextjsFill, RiReactjsLine, RiTailwindCssFill, RiBootstrapFill } from "react-icons/ri"
 
 const Highlight = ({ children }
     : Readonly<{
-        children: React.ReactNode;
+        children: React.ReactNode
     }>) => {
 
     return (

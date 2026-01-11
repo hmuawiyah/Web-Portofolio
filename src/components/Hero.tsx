@@ -14,7 +14,7 @@ import { RiFootballFill } from "react-icons/ri"
 
 const Highlight = ({ children }
     : Readonly<{
-        children: React.ReactNode;
+        children: React.ReactNode
     }>) => {
 
     return (

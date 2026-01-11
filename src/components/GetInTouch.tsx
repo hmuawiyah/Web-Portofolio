@@ -18,7 +18,7 @@ import Link from "next/link"
 
 const ButtonGetInTouch = ({ children }
     : Readonly<{
-        children: React.ReactNode;
+        children: React.ReactNode
     }>) => {
     return (
         <Card className="

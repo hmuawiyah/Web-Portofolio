@@ -12,10 +12,10 @@ import {
 import { Button } from "./ui/button"
 import Link from "next/link"
 import { useState } from "react"
-import { FaAngleUp } from "react-icons/fa6";
+import { FaAngleUp } from "react-icons/fa6"
 
 const Certificate = () => {
-    const [isMore, setIsMore] = useState(false)
+    const [isMore, setIsMore] = useState<boolean>()
 
     const data = [
         {
