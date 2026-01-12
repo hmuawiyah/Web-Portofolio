@@ -7,9 +7,10 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
-import { Button } from "./ui/button"
+import { Badge } from "@/components/ui/badge"
 import { LuExternalLink } from "react-icons/lu"
 import Link from "next/link"
+import { Button } from "./ui/button"
 
 const PersonalProject = () => {
     const data = [
@@ -38,7 +39,7 @@ const PersonalProject = () => {
 
     return (
         <div className="w-full md:w-[80%]">
-            <div className="font-semibold text-2xl mb-4">Personal Project</div>
+            <div className="font-semibold text-2xl mb-4">Personal Project <Badge className="bg-gray-800">Dummy!</Badge></div>
             <div className="flex flex-col flex-wrap lg:flex-nowrap md:flex-row gap-5">
                 {data.map((val, i) => (
                     <Card
