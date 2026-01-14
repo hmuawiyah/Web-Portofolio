@@ -51,7 +51,7 @@ const Hero = () => {
                             <CardDescription className="
                                 flex justify-center items-center text-xs py-1 px-3 rounded-md
                                 bg-gray-100 border text-black/80
-                            "><FaMapMarkerAlt className="text-xs mr-1" />Bekasi</CardDescription>
+                            "><FaMapMarkerAlt className="text-xs mr-1" />Bekasi, Indonesia</CardDescription>
                         </div>
                     </CardHeader>
                     <CardContent>
