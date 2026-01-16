@@ -61,13 +61,13 @@ const Experience = () => {
                     {data.map((val, i) => (
                         <Card className="w-full h-fit" key={i}>
                             <CardHeader>
-                                <div className="flex flex-col md:flex-row justify-start md:justify-between text-sm uppercase gap-0 mb-3">
+                                <div className="flex flex-col md:flex-row justify-start md:justify-between text-sm md:text-base uppercase gap-0 mb-3">
                                     <p>{val.companyName}</p>
                                     <p className="capitalize text-gray-500">{val.year}</p>
                                 </div>
-                                <CardTitle className="flex flex-wrap w-52 text-4xl text-[#fe4a23] font-display font-[400] uppercase">{val.subject}</CardTitle>
+                                <CardTitle className="flex flex-wrap w-[300] text-4xl text-[#fe4a23] font-display font-[400] uppercase">{val.subject}</CardTitle>
                             </CardHeader>
-                            <CardContent>
+                            <CardContent className="text-sm md:text-base">
                                 {val.textContent}
                             </CardContent>
                         </Card>
