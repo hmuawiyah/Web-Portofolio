@@ -24,25 +24,31 @@ const Highlight = ({ children }
 }
 
 type dataProps = {
+    icon: string
     companyName: string
     subject: string
-    year: string
+    yearStart: string
+    yearEnd: string
     textContent: string
 }
 
 const data: dataProps[] = [
     {
+        icon: '/logo/impro.png',
         companyName: 'Impro Studio Jakarta',
         subject: 'Junior Graphic Designer',
-        year: 'May 2023 - May 2025',
+        yearStart: 'May 2023',
+        yearEnd: '- May 2025',
         textContent:
-        `Developed 200+ high-quality mockups across various branding materials and
-        designed custom Canva templates to boost team efficiency and brand consistency.`
+            `Developed 200+ high-quality, high-resolution mockups and Canva templates 
+            designed to be user-friendly and easy to use by non-designers, with well-structured layouts and clear design guidelines to support efficient, consistent, and scalable content production.`
     }, {
-        
+
+        icon: '/logo/gunadarma.png',
         companyName: 'Universitas Gunadarma',
         subject: `Informatics`,
-        year: 'Sep 2019 - Dec 2023',
+        yearStart: 'Sep 2019',
+        yearEnd: '- Dec 2023',
         textContent:
             `Studied web development, algorithms, databases, and software engineering.
         Completed several personal and academic projects focused on fullstack web applications.`
@@ -53,68 +59,40 @@ const data: dataProps[] = [
 const Experience = () => {
 
     return (
-        <div className="flex flex-wrap w-full md:w-[80%] justify-between">
+        <div className="w-full md:w-[70%]">
+            {data.map((val, index) => (
+                <div key={index} className="flex gap-6 md:gap-10">
+                    <div className="relative hidden md:flex w-28 shrink-0 flex-col items-center md:w-36">
+                        {index < data.length - 1 && (
+                            <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[1.5px] bg-border" />
+                        )}
+                        <div className="relative z-10 font-medium text-foreground bg-card border border-border rounded-xl px-4 py-2 shadow-sm">
+                            <p> {val.yearStart} </p> <p> {val.yearEnd} </p>
+                        </div>
+                    </div>
 
-            <div className="w-full lg:w-[55%] xl:w-[60%]">
-                <div className="font-semibold text-2xl mb-4">Experience & Education</div>
-                <div className="flex flex-col w-full gap-5">
-                    {data.map((val, i) => (
-                        <Card className="w-full h-fit" key={i}>
-                            <CardHeader>
-                                <div className="flex flex-col md:flex-row justify-start md:justify-between text-sm md:text-base uppercase gap-0 mb-3">
-                                    <p>{val.companyName}</p>
-                                    <p className="capitalize text-gray-500">{val.year}</p>
+                    <div className="flex-1 pb-12">
+                        <Card>
+                            <CardContent className="flex flex-col md:flex-row gap-6">
+                                <div
+                                    className="w-13 h-13 md:w-18 md:h-18 shrink-0 bg-cover bg-center rounded-md border border-border"
+                                    style={{ backgroundImage: `url('${val.icon}')` }}
+                                > </div>
+                                <div className="flex flex-col gap-2">
+                                    <h3 className="text-primary font-display text-xl md:text-3xl uppercase tracking-wide leading-tight">
+                                        {val.subject}
+                                    </h3>
+                                    <p className="font-semibold">{val.companyName}</p>
+                                    <p className="block md:hidden bg-secondary text-foreground text-sm px-2 py-1 rounded-md w-fit border border-border">{val.yearStart} {val.yearEnd}</p>
+                                    <p className="text-xs md:text-sm mt-4 md:mt-0 leading-relaxed">
+                                        {val.textContent}
+                                    </p>
                                 </div>
-                                <CardTitle className="flex flex-wrap w-[300] text-4xl text-[#fe4a23] font-display font-[400] uppercase">{val.subject}</CardTitle>
-                            </CardHeader>
-                            <CardContent className="text-sm md:text-base">
-                                {val.textContent}
                             </CardContent>
                         </Card>
-                    ))}
+                    </div>
                 </div>
-            </div>
-
-            <div className="w-full lg:w-[43%] xl:w-[38%]">
-                <div className="mb-20 md:mb-0"></div>
-                <div className="font-semibold text-2xl mb-4">Skills</div>
-                <div className="flex flex-wrap lg:flex-nowrap flex-row md:flex-col w-full gap-5">
-                    <Card className="py-3 w-full">
-                        <CardContent className="flex justify-between items-center">
-                            <span className="text-sm"> Front End </span>
-                            <div className="flex flex-wrap gap-1 md:gap-3">
-                                <Highlight><RiNextjsFill /></Highlight>
-                                <Highlight><RiReactjsLine /></Highlight>
-                                <Highlight><SiTypescript /></Highlight>
-                                <Highlight><RiTailwindCssFill /></Highlight>
-                            </div>
-                        </CardContent>
-                    </Card>
-                    <Card className="py-3 w-full">
-                        <CardContent className="flex justify-between items-center">
-                            <span className="text-sm"> Backend End </span>
-                            <div className="flex flex-wrap gap-1 md:gap-3">
-                                <Highlight><SiExpress /></Highlight>
-                                <Highlight><SiMongodb /></Highlight>
-                                <Highlight><SiPostgresql /></Highlight>
-                                <Highlight><SiPrisma /></Highlight>
-                            </div>
-                        </CardContent>
-                    </Card>
-                    <Card className="py-3 w-full">
-                        <CardContent className="flex justify-between items-center">
-                            <span className="text-sm"> Design </span>
-                            <div className="flex flex-wrap gap-1 md:gap-3">
-                                <Highlight><SiAdobephotoshop /></Highlight>
-                                <Highlight><SiAdobeillustrator /></Highlight>
-                                <Highlight><SiAdobelightroomclassic /></Highlight>
-                                <Highlight><SiFigma /></Highlight>
-                            </div>
-                        </CardContent>
-                    </Card>
-                </div>
-            </div>
-
+            ))}
         </div>
     )
 }

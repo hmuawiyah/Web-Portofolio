@@ -11,6 +11,7 @@ import { Badge } from "@/components/ui/badge"
 import { LuExternalLink } from "react-icons/lu"
 import Link from "next/link"
 import { Button } from "./ui/button"
+import { FaGithub } from "react-icons/fa6"
 
 const PersonalProject = () => {
     const data = [
@@ -39,38 +40,38 @@ const PersonalProject = () => {
 
     return (
         <div className="w-full md:w-[80%]">
-            <div className="font-semibold text-2xl mb-4">Personal Project <Badge className="bg-gray-800">Dummy!</Badge></div>
+            <div className="font-semibold text-2xl mb-4">Personal Project <Badge className="bg-linear-to-r from-cyan-500 to-blue-500 font-semibold">Dummy!</Badge></div>
             <div className="flex flex-col flex-wrap lg:flex-nowrap md:flex-row gap-5">
                 {data.map((val, i) => (
                     <Card
                         key={i}
-                        className="flex h-[300] w-full md:w-[48%] lg:w-[35%] flex-col justify-between py-4 pb-0!"
+                        className="flex w-full md:w-[48%] lg:w-[35%] flex-col justify-between py-6"
                     >
-                        <CardHeader className="gap-0">
-                            <CardTitle className="font-display text-4xl font-normal uppercase text-[#fe4a23]">
-                                {val.title}
-                            </CardTitle>
-                            <p>Web App {val.desc}</p>
-                        </CardHeader>
+                        {/* <CardHeader className="gap-0">
+                        </CardHeader> */}
 
-                        <CardContent className="relative flex h-full items-end pb-0 overflow-hidden">
+                        <CardContent className="flex flex-col overflow-hidden space-y-4">
                             <div
-                                className={`absolute inset-0 bg-cover bg-top rounded-b-xl`}
+                                className="w-full h-35 bg-cover rounded-md shadow-sm border border-border"
                                 style={{ backgroundImage: `url(${val.img})` }}
-
-                                // className={`absolute inset-0 bg-cover bg-top bg-[url(/Crumbly-SS.jpg)] rounded-b-xl`}
                             />
 
-                            <div className="absolute inset-0 bg-linear-to-t from-black/70 from-0% to-transparent to-80% rounded-b-xl" />
+                            <div>
+                                <CardTitle className="font-display text-3xl font-normal uppercase text-primary">
+                                    {val.title}
+                                </CardTitle>
+                                <p className="">Web App {val.desc}</p>
+                            </div>
 
-                            <div className="relative z-10 flex w-full gap-2 pb-4">
+
+                            <div className="flex w-full gap-2">
                                 <Link href={val.linkDetail} target="_blank" className="w-1/2">
-                                    <Button variant="outlineNew" className="w-full">
-                                        Github
+                                    <Button variant="secondary" className="w-full">
+                                        <FaGithub /> Github
                                     </Button>
                                 </Link>
                                 <Link href={val.linkOpen} target="_blank" className="w-1/2">
-                                    <Button variant="neon" className="w-full">
+                                    <Button variant="default" className="w-full">
                                         Open <LuExternalLink />
                                     </Button>
                                 </Link>

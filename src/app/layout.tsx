@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Geist, Geist_Mono } from "next/font/google"
 import "./globals.css"
 import Navbar from "@/components/Navbar"
+import { SoftGradient } from "@/components/SoftGradient"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,16 +29,19 @@ export default function RootLayout({
 
 
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="format-detection" content="telephone=no" />
       </head>
 
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-100/50`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#F9FAFB]`}
       >
-        <Navbar  />
-        <div className="flex flex-col items-center min-h-screen mx-10 xl:mx-30 pt-13">
+        <Navbar />
+
+        <SoftGradient />
+
+        <div className="flex flex-col items-center min-h-screen mx-7 xl:mx-30">
 
           {children}
 
