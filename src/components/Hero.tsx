@@ -43,8 +43,8 @@ const Hero = () => {
                 rounded-full w-[40%] xl:w-[22.5%] h-fit aspect-1/1
             ">
                 <div className="absolute inset-0 bg-[url(/me-3.jpg)] bg-size-[150%] bg-position-[50%_60%] rounded-full"></div>
+                {/* <div className="absolute inset-0 bg-linear-to-t from-black/20 from-0% to-transparent to-80% rounded-full"></div> */}
                 <div className="absolute inset-0 bg-[url(/openToWork.png)] bg-cover rounded-full"></div>
-                <div className="absolute inset-0 bg-linear-to-t from-black/20 from-0% to-transparent to-80% rounded-full"></div>
             </div>
             <div className="flex flex-col w-full lg:w-[75%] gap-5">
                 <Card className="flex justify-center items-center border-0 shadow-none bg-transparent">
