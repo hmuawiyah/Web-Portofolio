@@ -1,19 +1,21 @@
 import React from 'react'
 
 const skillWords = [
-    "Next",
-    "React",
-    "Typescript",
-    "Javascript",
-    "Express",
-    "Mongo",
-    "Mongoose",
+    "React JS",
+    "Next JS",
+    "TypeScript",
+    "Express JS",
+    "Prisma ORM",
+    "Mongoose ORM",
     "SQL",
-    "Prisma",
-    "Photoshop",
-    "Illustrator",
-    "Canva",
-    "Figma"
+    "MongoDB",
+    "Bootstrap CSS",
+    "Tailwind CSS",
+    "Shadcn UI",
+    "Golang",
+    "Adobe Photoshop",
+    "Adobe Illustrator",
+    "Figma",
 ];
 
 const row1 = [...skillWords];

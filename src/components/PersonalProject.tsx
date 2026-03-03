@@ -17,21 +17,21 @@ const PersonalProject = () => {
     const data = [
         {
             title: "EasyTask",
-            desc: "Task Management",
+            desc: "Web app for real-time estimation of household electricity consumption and monthly costs.",
             img: "/EasyTask-SS.jpg",
             linkDetail: "https://github.com/hmuawiyah/EASYTASK-Web-App-Task-Management",
             linkOpen: "https://easytask-web.vercel.app/"
         },
         {
             title: "Crumbly",
-            desc: "Online Shop",
+            desc: "E-commerce platform with multi-payment gateway integration and order management.",
             img: "/Crumbly-SS.jpg",
             linkDetail: "https://github.com/hmuawiyah/CRUMBLY-Web-App-Online-Shop",
             linkOpen: "https://crumbly-bread.vercel.app/"
         },
         {
             title: "Voltora",
-            desc: "Power Calculator",
+            desc: "Web app for real-time estimation of household electricity consumption and monthly costs.",
             img: "/Voltora-SS.jpg",
             linkDetail: "https://github.com/hmuawiyah/VOLTORA-Web-App-Power-Calculator",
             linkOpen: "https://voltora-calculator.vercel.app/"
@@ -47,20 +47,18 @@ const PersonalProject = () => {
                         key={i}
                         className="flex w-full md:w-[48%] lg:w-[35%] flex-col justify-between py-6"
                     >
-                        {/* <CardHeader className="gap-0">
-                        </CardHeader> */}
 
-                        <CardContent className="flex flex-col overflow-hidden space-y-4">
+                        <CardContent className="flex flex-col overflow-hidden space-y-6">
                             <div
                                 className="w-full h-35 bg-cover rounded-md shadow-sm border border-border"
                                 style={{ backgroundImage: `url(${val.img})` }}
                             />
 
-                            <div>
+                            <div className="flex flex-col space-y-2">
                                 <CardTitle className="font-display text-3xl font-normal uppercase text-primary">
                                     {val.title}
                                 </CardTitle>
-                                <p className="">Web App {val.desc}</p>
+                                <p className="">{val.desc}</p>
                             </div>
 
 
@@ -76,13 +74,14 @@ const PersonalProject = () => {
                                     </Button>
                                 </Link>
                             </div>
+
                         </CardContent>
                     </Card>
 
                 ))
                 }
             </div>
-        </div>
+        </div >
     )
 }
 
