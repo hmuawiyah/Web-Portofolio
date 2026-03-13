@@ -46,7 +46,7 @@ const data: dataProps[] = [
 
         icon: '/logo/gunadarma.png',
         companyName: 'Universitas Gunadarma',
-        subject: `Informatics`,
+        subject: `Bachelor of Informatics`,
         yearStart: 'Sep 2019',
         yearEnd: '- Dec 2023',
         textContent:
@@ -75,14 +75,14 @@ const Experience = () => {
                         <Card>
                             <CardContent className="flex flex-col md:flex-row gap-6">
                                 <div
-                                    className="w-13 h-13 md:w-18 md:h-18 shrink-0 bg-cover bg-center rounded-md border border-border"
+                                    className="w-16 h-16 md:w-18 md:h-18 shrink-0 bg-cover bg-center rounded-md border border-border"
                                     style={{ backgroundImage: `url('${val.icon}')` }}
                                 > </div>
                                 <div className="flex flex-col gap-2">
-                                    <h3 className="text-primary font-display text-xl md:text-3xl uppercase tracking-wide leading-tight">
+                                    <h3 className="text-primary font-display text-2xl md:text-3xl uppercase tracking-wide leading-tight">
                                         {val.subject}
                                     </h3>
-                                    <p className="font-semibold">{val.companyName}</p>
+                                    <p className="font-semibold text-lg">{val.companyName}</p>
                                     <p className="block md:hidden bg-secondary text-foreground text-sm px-2 py-1 rounded-md w-fit border border-border">{val.yearStart} {val.yearEnd}</p>
                                     <p className="text-xs md:text-sm mt-4 md:mt-0 leading-relaxed">
                                         {val.textContent}

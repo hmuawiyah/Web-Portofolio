@@ -77,20 +77,20 @@ const Certificate = () => {
             url: "https://drive.google.com/file/d/1PuGIoqDNk4FtWgzqhsM8Ol3yjlH-iWzE/view"
         },
         {
-            icon: '/logo/dicoding.png',
-            title: "Learning Basic of Javascript Programming",
-            org: "Dicoding Indonesia",
-            year: "Sep 2023",
-            id: "81P281D3QPOY",
-            url: "https://www.dicoding.com/certificates/81P281D3QPOY"
-        },
-        {
             icon: '/logo/gunadarma.png',
             title: "Basic Web Application Development",
             org: "Uninversitas Gunadarma",
             year: "Jun 2023",
             id: "538265",
             url: "https://drive.google.com/file/d/1J1c0_M-CLy-brKZTw2iSDo2D95ynvQ_-/view"
+        },
+        {
+            icon: '/logo/dicoding.png',
+            title: "Learning Basic of Javascript Programming",
+            org: "Dicoding Indonesia",
+            year: "Sep 2022",
+            id: "81P281D3QPOY",
+            url: "https://www.dicoding.com/certificates/81P281D3QPOY"
         },
         {
             icon: '/logo/gunadarma.png',
@@ -136,7 +136,22 @@ const Certificate = () => {
 
     return (
         <div className="w-full md:w-[80%]">
-            <div className="font-semibold text-2xl mb-4">Certificates</div>
+            <div className="font-semibold text-2xl mb-4">
+                Certificates
+
+                <Button variant={'default'} size={'sm'} onClick={() => setIsMore(!isMore)}
+                    className="ml-2 p-0! h-6! w-6!">
+
+                    <FaAngleUp className={`transition-all duration-300
+                        ${isMore
+                            ? 'rotate-0'
+                            : 'rotate-180'
+                        }
+                        `} />
+
+                </Button>
+
+            </div>
             <div className={`flex flex-wrap justify-between w-full gap-4 overflow-hidden transition-all duration-300 ease-in-out
             ${isMore ? "h-[2050] md:h-[980]" : "h-[330] md:h-[210]"}`}>
 
@@ -184,8 +199,8 @@ const Certificate = () => {
                 <Button variant={'default'} onClick={() => setIsMore(!isMore)}
                     className="mt-5">
                     {isMore
-                        ? "See less"
-                        : "See more"
+                        ? "Show less"
+                        : "Show more"
                     }
                     <FaAngleUp className={`transition-all duration-300
                         ${isMore

@@ -16,11 +16,11 @@ import { FaGithub } from "react-icons/fa6"
 const PersonalProject = () => {
     const data = [
         {
-            title: "EasyTask",
+            title: "Voltora",
             desc: "Web app for real-time estimation of household electricity consumption and monthly costs.",
-            img: "/EasyTask-SS.jpg",
-            linkDetail: "https://github.com/hmuawiyah/EASYTASK-Web-App-Task-Management",
-            linkOpen: "https://easytask-web.vercel.app/"
+            img: "/Voltora-SS.jpg",
+            linkDetail: "https://github.com/hmuawiyah/VOLTORA-Web-App-Power-Calculator",
+            linkOpen: "https://voltora-calculator.vercel.app/"
         },
         {
             title: "Crumbly",
@@ -30,11 +30,11 @@ const PersonalProject = () => {
             linkOpen: "https://crumbly-bread.vercel.app/"
         },
         {
-            title: "Voltora",
+            title: "EasyTask",
             desc: "Web app for real-time estimation of household electricity consumption and monthly costs.",
-            img: "/Voltora-SS.jpg",
-            linkDetail: "https://github.com/hmuawiyah/VOLTORA-Web-App-Power-Calculator",
-            linkOpen: "https://voltora-calculator.vercel.app/"
+            img: "/EasyTask-SS.jpg",
+            linkDetail: "https://github.com/hmuawiyah/EASYTASK-Web-App-Task-Management",
+            linkOpen: "https://easytask-web.vercel.app/"
         },
     ]
 
@@ -62,7 +62,7 @@ const PersonalProject = () => {
                             </div>
 
 
-                            <div className="flex w-full gap-2">
+                            <div className="flex w-full gap-2 mt-5">
                                 <Link href={val.linkDetail} target="_blank" className="w-1/2">
                                     <Button variant="secondary" className="w-full">
                                         <FaGithub /> Github
