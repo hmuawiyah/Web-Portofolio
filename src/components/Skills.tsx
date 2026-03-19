@@ -1,4 +1,5 @@
 import React from 'react'
+import FadeContent from '@/components/FadeContent';
 
 const skillWords = [
     "React JS",
@@ -58,13 +59,17 @@ const MarqueeRow = ({ words, direction = "left", speed = "normal" }: MarqueeRowP
 
 const Skills = () => {
     return (
-        <div className="w-full md:w-[70%]">
+        <FadeContent
+            className="w-full md:w-[70%]"
+        >
+
             <div className="w-full space-y-1">
                 <MarqueeRow words={row1} direction="left" />
                 <MarqueeRow words={row2} direction="right" speed="slow" />
                 <MarqueeRow words={row3} direction="left" speed="slow" />
             </div>
-        </div>
+
+        </FadeContent >
     )
 }
 

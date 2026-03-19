@@ -14,15 +14,17 @@ import { MdEmail } from "react-icons/md"
 import Link from "next/link"
 import { RiInstagramFill } from "react-icons/ri"
 import { SoftGradient } from "./SoftGradient"
+import FadeContent from "./FadeContent"
 
 const GetInTouch = () => {
 
     return (
-        <div id="getInTouch" className="w-full md:w-[80%] relative">
+        <FadeContent
+            className="w-full md:w-[80%] relative"
+        >
             <div className="bg-primary flex flex-col justify-center items-center p-9 md:p-15 rounded-xl relative overflow-hidden">
 
                 <div className="absolute inset-0 z-0 pointer-events-none">
-                    {/* <SoftGradient /> */}
                     <div
                         className="hidden md:block absolute inset-0 w-full h-full"
                         style={{
@@ -47,7 +49,7 @@ const GetInTouch = () => {
                     />
                 </div>
 
-                <div className="text-center font-display font-semibold text-background uppercase text-4xl mb-4 relative z-10">Get in touch</div>
+                <div className="text-center font-display font-[450] text-background uppercase text-3xl md:text-5xl mb-4 relative z-10">Get in touch</div>
                 <p className=" text-center font-medium text-background text-lg md:text-xl w-full md:w-130 leading-6 mb-15 relative z-10">
                     Want to connect? Feel free to reach out anytime
                 </p>
@@ -75,7 +77,7 @@ const GetInTouch = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </FadeContent >
     )
 }
 

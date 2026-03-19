@@ -14,6 +14,7 @@ import Link from "next/link"
 import { useState } from "react"
 import { FaAngleUp } from "react-icons/fa6"
 import { LuExternalLink } from "react-icons/lu"
+import FadeContent from "@/components/FadeContent"
 
 interface CertificateData {
     icon: string
@@ -28,6 +29,14 @@ const Certificate = () => {
     const [isMore, setIsMore] = useState<boolean>()
 
     const data: CertificateData[] = [
+        {
+            icon: '/logo/ms.png',
+            title: "Fundamentals of UI/UX Design",
+            org: "Microsoft",
+            year: "Feb 2026",
+            id: "O0JANXIP9LDS",
+            url: "https://www.coursera.org/account/accomplishments/verify/O0JANXIP9LDS"
+        },
         {
             icon: '/logo/dicoding.png',
             title: "Introduction to Artificial Intelligence",
@@ -135,7 +144,9 @@ const Certificate = () => {
     ]
 
     return (
-        <div className="w-full md:w-[80%]">
+        <FadeContent
+            className="w-full md:w-[80%]"
+        >
             <div className="font-semibold text-2xl mb-4">
                 Certificates
 
@@ -152,11 +163,11 @@ const Certificate = () => {
                 </Button>
 
             </div>
-            <div className={`flex flex-wrap justify-between w-full gap-4 overflow-hidden transition-all duration-300 ease-in-out
-            ${isMore ? "h-[2050] md:h-[980]" : "h-[330] md:h-[210]"}`}>
+            <div className={`grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-full gap-4 overflow-hidden transition-all duration-300 ease-in-out
+            ${isMore ? "max-h-[5000px]" : "max-h-[350px] md:max-h-[210px]"}`}>
 
                 {data.map((val, i) => (
-                    <Card key={i} className="w-full md:w-[47.9%] xl:w-[32%] h-35 md:h-45 gap-0 py-4">
+                    <Card key={i} className="w-full h-35 md:h-45 gap-0 py-4">
                         <CardContent className="flex flex-col justify-between h-full">
                             <div className="flex gap-2">
                                 <div
@@ -185,9 +196,7 @@ const Certificate = () => {
                                     </Link>
                                 </Button>
                             ) : (
-                                <Button variant={'secondary'} size={'sm'} className="text-xs" disabled>
-                                    No Link Available <LuExternalLink />
-                                </Button>
+                                ""
                             )}
                         </CardContent>
                     </Card>
@@ -213,7 +222,7 @@ const Certificate = () => {
                 </Button>
             </div>
 
-        </div>
+        </FadeContent>
     )
 }
 

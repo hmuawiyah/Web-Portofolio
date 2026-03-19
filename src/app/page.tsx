@@ -1,3 +1,4 @@
+'use client'
 import Certificate from "@/components/Certificate";
 import Experience from "@/components/Experience";
 import GetInTouch from "@/components/GetInTouch";
@@ -9,6 +10,7 @@ import WhatICanDo from "@/components/WhatIcanDo";
 export default function Home() {
   return (
     <>
+
       <div id="home" className="mb-20"></div>
       <div id="" className="mb-10"></div>
       <Hero />

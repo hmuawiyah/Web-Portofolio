@@ -7,21 +7,9 @@ import {
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
-
 import { SiAdobephotoshop, SiAdobeillustrator, SiFigma, SiMongodb, SiExpress, SiPostgresql, SiPrisma, SiAdobelightroomclassic, SiTypescript } from "react-icons/si"
 import { RiNextjsFill, RiReactjsLine, RiTailwindCssFill, RiBootstrapFill } from "react-icons/ri"
-
-const Highlight = ({ children }
-    : Readonly<{
-        children: React.ReactNode
-    }>) => {
-
-    return (
-        <div className="rounded-md bg-muted p-2 text-base xl:text-xl">
-            {children}
-        </div>
-    )
-}
+import FadeContent from "@/components/FadeContent"
 
 type dataProps = {
     icon: string
@@ -59,12 +47,15 @@ const data: dataProps[] = [
 const Experience = () => {
 
     return (
-        <div className="w-full md:w-[70%]">
+        <FadeContent
+            className="w-full md:w-[70%]"
+        >
+
             {data.map((val, index) => (
                 <div key={index} className="flex gap-6 md:gap-10">
                     <div className="relative hidden md:flex w-28 shrink-0 flex-col items-center md:w-36">
                         {index < data.length - 1 && (
-                            <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[1.5px] bg-border" />
+                            <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-[1px] bg-foreground/50" />
                         )}
                         <div className="relative z-10 font-medium text-foreground bg-card border border-border rounded-xl px-4 py-2 shadow-sm">
                             <p> {val.yearStart} </p> <p> {val.yearEnd} </p>
@@ -79,7 +70,7 @@ const Experience = () => {
                                     style={{ backgroundImage: `url('${val.icon}')` }}
                                 > </div>
                                 <div className="flex flex-col gap-2">
-                                    <h3 className="text-primary font-display text-2xl md:text-3xl uppercase tracking-wide leading-tight">
+                                    <h3 className="text-primary font-[450] font-display text-2xl md:text-3xl uppercase tracking-wide leading-tight">
                                         {val.subject}
                                     </h3>
                                     <p className="font-semibold text-lg">{val.companyName}</p>
@@ -93,7 +84,8 @@ const Experience = () => {
                     </div>
                 </div>
             ))}
-        </div>
+
+        </FadeContent>
     )
 }
 

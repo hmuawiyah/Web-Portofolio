@@ -6,12 +6,13 @@ import {
     CardFooter,
     CardHeader,
     CardTitle,
-} from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { LuExternalLink } from "react-icons/lu"
-import Link from "next/link"
-import { Button } from "./ui/button"
-import { FaGithub } from "react-icons/fa6"
+} from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { LuExternalLink } from "react-icons/lu";
+import Link from "next/link";
+import { Button } from "./ui/button";
+import { FaGithub } from "react-icons/fa6";
+import FadeContent from "./FadeContent";
 
 const PersonalProject = () => {
     const data = [
@@ -39,7 +40,9 @@ const PersonalProject = () => {
     ]
 
     return (
-        <div className="w-full md:w-[80%]">
+        <FadeContent
+            className="w-full md:w-[80%]"
+        >
             <div className="font-semibold text-2xl mb-4">Personal Project <Badge className="bg-linear-to-r from-cyan-500 to-blue-500 font-semibold">Dummy!</Badge></div>
             <div className="flex flex-col flex-wrap lg:flex-nowrap md:flex-row gap-5">
                 {data.map((val, i) => (
@@ -55,7 +58,7 @@ const PersonalProject = () => {
                             />
 
                             <div className="flex flex-col space-y-2">
-                                <CardTitle className="font-display text-3xl font-normal uppercase text-primary">
+                                <CardTitle className="font-display font-[450] text-3xl uppercase text-primary">
                                     {val.title}
                                 </CardTitle>
                                 <p className="">{val.desc}</p>
@@ -81,7 +84,7 @@ const PersonalProject = () => {
                 ))
                 }
             </div>
-        </div >
+        </FadeContent>
     )
 }
 
