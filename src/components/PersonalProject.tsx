@@ -1,10 +1,6 @@
 import {
     Card,
-    CardAction,
     CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
     CardTitle,
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -66,16 +62,16 @@ const PersonalProject = () => {
 
 
                             <div className="flex w-full gap-2 mt-5">
-                                <Link href={val.linkDetail} target="_blank" className="w-1/2">
-                                    <Button variant="secondary" className="w-full">
+                                <Button variant="secondary" className="w-1/2" asChild>
+                                    <Link href={val.linkDetail} target="_blank">
                                         <FaGithub /> Github
-                                    </Button>
-                                </Link>
-                                <Link href={val.linkOpen} target="_blank" className="w-1/2">
-                                    <Button variant="default" className="w-full">
+                                    </Link>
+                                </Button>
+                                <Button variant="default" className="w-1/2" asChild>
+                                    <Link href={val.linkOpen} target="_blank">
                                         Open <LuExternalLink />
-                                    </Button>
-                                </Link>
+                                    </Link>
+                                </Button>
                             </div>
 
                         </CardContent>

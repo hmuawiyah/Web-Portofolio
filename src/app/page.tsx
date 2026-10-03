@@ -1,4 +1,3 @@
-'use client'
 import Certificate from "@/components/Certificate";
 import Experience from "@/components/Experience";
 import GetInTouch from "@/components/GetInTouch";
@@ -9,36 +8,40 @@ import WhatICanDo from "@/components/WhatIcanDo";
 
 export default function Home() {
   return (
-    <>
+    <main id="home" className="flex w-full flex-col items-center pt-28 md:pt-32">
 
-      <div id="home" className="mb-20"></div>
-      <div id="" className="mb-10"></div>
-      <Hero />
+      <section aria-label="Introduction" className="flex w-full justify-center">
+        <Hero />
+      </section>
 
-      <div id="experience" className="mb-15 md:mb-30"></div>
-      <Experience />
+      <section id="project" aria-label="Personal projects" className="flex w-full scroll-mt-24 justify-center pt-24 md:pt-32">
+        <PersonalProject />
+      </section>
 
-      <div id="" className="mb-6 md:mb-10"></div>
-      <Skills />
+      <section id="experience" aria-label="Experience" className="flex w-full scroll-mt-24 justify-center pt-24 md:pt-32">
+        <Experience />
+      </section>
 
-      <div id="project" className="mb-15 md:mb-30"></div>
-      <PersonalProject />
+      <section aria-label="Skills" className="flex w-full justify-center pt-8 md:pt-12">
+        <Skills />
+      </section>
 
-      <div id="certificate" className="mb-15 md:mb-30"></div>
-      <Certificate />
+      <section id="certificate" aria-label="Certificates" className="flex w-full scroll-mt-24 justify-center pt-24 md:pt-32">
+        <Certificate />
+      </section>
 
-      <div id="whaticando" className="mb-15"></div>
-      <WhatICanDo />
+      <section id="whaticando" aria-label="Services" className="flex w-full scroll-mt-24 justify-center pt-24">
+        <WhatICanDo />
+      </section>
 
-      <div id="getInTouch" className="mb-15"></div>
-      <GetInTouch />
+      <section id="getInTouch" aria-label="Contact" className="flex w-full scroll-mt-24 justify-center pt-24">
+        <GetInTouch />
+      </section>
 
-      <div className="mb-30"></div>
+      <footer className="w-full pt-28 md:w-[80%]">
+        <p className="mb-5 text-right text-sm text-black/50">© {new Date().getFullYear()} Husein&apos;s Web App Portfolio</p>
+      </footer>
 
-      <div className="w-full md:w-[80%]">
-        <p className="text-right text-black/50 text-sm mb-5">@2025 Husein’s Web App Portfolio</p>
-      </div>
-
-    </>
+    </main>
   )
 }

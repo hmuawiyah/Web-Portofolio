@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "Husein's Web Portofolio",
-  description: "Web Portofolio",
+  title: "Husein Muawiyah | Web Developer Portfolio",
+  description: "Portfolio of Husein Muawiyah, a web developer focused on accessible, responsive, and visually consistent digital products.",
 }
 
 export default function RootLayout({
@@ -41,7 +41,7 @@ export default function RootLayout({
 
         <SoftGradient />
 
-        <div className="flex flex-col items-center min-h-screen mx-7 xl:mx-30">
+        <div className="flex min-h-screen flex-col items-center px-7 xl:px-30">
 
           {children}
 

@@ -1,19 +1,9 @@
-import {
-    Card,
-    CardAction,
-    CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
-} from "@/components/ui/card"
 import { Button } from "./ui/button"
 import { SiGithub } from "react-icons/si"
 import { FaLinkedinIn } from "react-icons/fa"
 import { MdEmail } from "react-icons/md"
 import Link from "next/link"
 import { RiInstagramFill } from "react-icons/ri"
-import { SoftGradient } from "./SoftGradient"
 import FadeContent from "./FadeContent"
 
 const GetInTouch = () => {

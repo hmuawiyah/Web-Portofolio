@@ -1,3 +1,5 @@
+"use client";
+
 import { useRef, useEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -27,6 +29,11 @@ const FadeContent = ({
   useEffect(() => {
     const el = ref.current;
     if (!el) return;
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      gsap.set(el, { autoAlpha: 1, filter: 'blur(0px)', clearProps: 'willChange' });
+      return;
+    }
 
     let scrollerTarget = container || document.getElementById('snap-main-container') || null;
     if (typeof scrollerTarget === 'string') {

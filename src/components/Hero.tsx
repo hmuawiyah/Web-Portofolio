@@ -1,14 +1,12 @@
 "use client"
 import {
     Card,
-    CardAction,
     CardContent,
     CardDescription,
-    CardFooter,
     CardHeader,
     CardTitle,
 } from "@/components/ui/card"
-import { FaLinkedinIn, FaInstagram } from "react-icons/fa"
+import { FaLinkedinIn } from "react-icons/fa"
 import { RiInstagramFill } from "react-icons/ri"
 import { SiGithub } from "react-icons/si"
 import { MdEmail } from "react-icons/md"
@@ -27,7 +25,7 @@ const Hero = () => {
 
     return (
         <FadeContent
-            className="flex flex-col justify-center items-center w-full md:w-[80%]"
+            className="flex flex-col gap-2 justify-center items-center w-full md:w-[80%]"
         >
 
             <div
@@ -40,46 +38,46 @@ const Hero = () => {
                 {true && (<div className="absolute inset-0 bg-[url(/openToWork.png)] bg-cover rounded-full"></div>)}
             </div>
 
-            <div className="flex flex-col w-full lg:w-[75%] gap-5">
-                <Card className="flex justify-center items-center border-0 shadow-none bg-transparent">
-                    <CardHeader className="flex flex-col items-center w-full gap- md:gap-3">
-                        <CardTitle className="text-4xl md:text-5xl font-display font-[450] text-center text-primary uppercase">Husein Muawiyah</CardTitle>
-                        <CardDescription className="text-lg md:text-xl font-[500] text-foreground">
+            <div className="flex flex-col w-full lg:w-[75%] gap-5 bg-transparent">
+                <div className="flex flex-col gap-6 justify-center items-center border-0 shadow-none bg-transparent">
+                    <div className="flex flex-col items-center w-full gap- md:gap-3">
+                        <div className="text-4xl md:text-5xl font-display font-[450] text-center text-primary uppercase">Husein Muawiyah</div>
+                        <div className="text-lg md:text-xl font-[500] text-foreground">
                             Junior Web Developer
-                        </CardDescription>
-                        <CardDescription className="
+                        </div>
+                        <div className="
                                 flex justify-center items-center text-sm md:text-base py-1 px-3 rounded-md
                                 bg-background border border-border font-[500] text-black/80 shadow-md 
-                            "><PiMapPinLineDuotone className="text-sm md:text-base mr-2" />Bekasi, Indonesia</CardDescription>
-                    </CardHeader>
+                            "><PiMapPinLineDuotone className="text-sm md:text-base mr-2" />Bekasi, Indonesia</div>
+                    </div>
 
-                    <CardContent className="flex justify-center text-foreground text-center text-xs md:text-base font-medium w-[320] md:w-[730]">
+                    <div className="flex justify-center text-foreground text-center text-xs md:text-base font-medium w-[320] md:w-[580]">
                         {textContent}
-                    </CardContent>
+                    </div>
 
-                    <CardContent className="flex justify-center items-center gap-0">
-                        <Button variant={"social"} className="w-12 h-auto aspect-1/1">
-                            <Link href={"https://www.linkedin.com/in/husein-muawiyah/"} target="_blank" className="">
+                    <div className="flex justify-center items-center gap-0">
+                        <Button variant={"social"} className="w-12 h-auto aspect-1/1" asChild>
+                            <Link href={"https://www.linkedin.com/in/husein-muawiyah/"} target="_blank" aria-label="LinkedIn profile">
                                 <FaLinkedinIn className="w-5! md:w-6! h-auto! aspect-1/1" />
                             </Link>
                         </Button>
-                        <Button variant={"social"} className="w-12 h-auto aspect-1/1">
-                            <Link href={"https://github.com/hmuawiyah"} target="_blank">
+                        <Button variant={"social"} className="w-12 h-auto aspect-1/1" asChild>
+                            <Link href={"https://github.com/hmuawiyah"} target="_blank" aria-label="GitHub profile">
                                 <SiGithub className="w-5! md:w-6! h-auto! aspect-1/1" />
                             </Link>
                         </Button>
-                        <Button variant={"social"} className="w-12 h-auto aspect-1/1">
-                            <Link href={"mailto:huseinmuawiyah@gmail.com"} target="_blank">
+                        <Button variant={"social"} className="w-12 h-auto aspect-1/1" asChild>
+                            <Link href={"mailto:huseinmuawiyah@gmail.com"} aria-label="Send an email">
                                 <MdEmail className="w-6! md:w-7! h-auto! aspect-1/1" />
                             </Link>
                         </Button>
-                        <Button variant={"social"} className="w-12 h-auto aspect-1/1">
-                            <Link href={"https://www.instagram.com/huseinmuawiyah/"} target="_blank">
+                        <Button variant={"social"} className="w-12 h-auto aspect-1/1" asChild>
+                            <Link href={"https://www.instagram.com/huseinmuawiyah/"} target="_blank" aria-label="Instagram profile">
                                 <RiInstagramFill className="w-6! md:w-7! h-auto! aspect-1/1" />
                             </Link>
                         </Button>
-                    </CardContent>
-                </Card>
+                    </div>
+                </div>
             </div>
         </FadeContent>
     )

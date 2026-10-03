@@ -1,14 +1,7 @@
 import {
     Card,
-    CardAction,
     CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
-    CardTitle,
 } from "@/components/ui/card"
-import { SiAdobephotoshop, SiAdobeillustrator, SiFigma, SiMongodb, SiExpress, SiPostgresql, SiPrisma, SiAdobelightroomclassic, SiTypescript } from "react-icons/si"
-import { RiNextjsFill, RiReactjsLine, RiTailwindCssFill, RiBootstrapFill } from "react-icons/ri"
 import FadeContent from "@/components/FadeContent"
 
 type dataProps = {
@@ -22,6 +15,15 @@ type dataProps = {
 
 const data: dataProps[] = [
     {
+        icon: '/logo/asietex.png',
+        companyName: 'PT Asietex Sinar Indopratama',
+        subject: 'Junior Web Programmer',
+        yearStart: 'Apr 2026',
+        yearEnd: '- Now',
+        textContent:
+            `Analyzed and migrated legacy VB core business modules to a Laravel backend, incorporating user authentication and bug fixes. 
+            Frontend redesign converted outdated VB desktop grids into a modern, responsive, and user-friendly web interface.`
+    }, {
         icon: '/logo/impro.png',
         companyName: 'Impro Studio Jakarta',
         subject: 'Junior Graphic Designer',

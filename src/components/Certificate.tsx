@@ -2,11 +2,7 @@
 
 import {
     Card,
-    CardAction,
     CardContent,
-    CardDescription,
-    CardFooter,
-    CardHeader,
     CardTitle,
 } from "@/components/ui/card"
 import { Button } from "./ui/button"
@@ -26,7 +22,7 @@ interface CertificateData {
 }
 
 const Certificate = () => {
-    const [isMore, setIsMore] = useState<boolean>()
+    const [isMore, setIsMore] = useState(false)
 
     const data: CertificateData[] = [
         {
@@ -151,6 +147,8 @@ const Certificate = () => {
                 Certificates
 
                 <Button variant={'default'} size={'sm'} onClick={() => setIsMore(!isMore)}
+                    aria-label={isMore ? "Show fewer certificates" : "Show more certificates"}
+                    aria-expanded={isMore} aria-controls="certificate-list"
                     className="ml-2 p-0! h-6! w-6!">
 
                     <FaAngleUp className={`transition-all duration-300
@@ -163,11 +161,11 @@ const Certificate = () => {
                 </Button>
 
             </div>
-            <div className={`grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-full gap-4 overflow-hidden transition-all duration-300 ease-in-out
+            <div id="certificate-list" className={`grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 w-full gap-4 overflow-hidden transition-all duration-300 ease-in-out
             ${isMore ? "max-h-[5000px]" : "max-h-[350px] md:max-h-[210px]"}`}>
 
-                {data.map((val, i) => (
-                    <Card key={i} className="w-full h-35 md:h-45 gap-0 py-4">
+                {data.map((val) => (
+                    <Card key={val.id} className="w-full h-35 md:h-45 gap-0 py-4">
                         <CardContent className="flex flex-col justify-between h-full">
                             <div className="flex gap-2">
                                 <div
@@ -206,6 +204,7 @@ const Certificate = () => {
 
             <div className="flex justify-center w-full ">
                 <Button variant={'default'} onClick={() => setIsMore(!isMore)}
+                    aria-expanded={isMore} aria-controls="certificate-list"
                     className="mt-5">
                     {isMore
                         ? "Show less"

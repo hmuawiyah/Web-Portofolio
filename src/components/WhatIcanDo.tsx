@@ -1,8 +1,8 @@
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
+import { Accordion, AccordionContent, AccordionItem } from "@/components/ui/accordion"
 import { Card, CardContent } from "./ui/card"
 import { PiGlobeSimpleDuotone, PiImageDuotone, PiLayoutDuotone } from "react-icons/pi"
 
-import { HeadsetIcon, PackageIcon, ChevronLeft, RefreshCwIcon } from "lucide-react"
+import { ChevronLeft } from "lucide-react"
 
 import { Accordion as AccordionPrimitive } from "radix-ui"
 import FadeContent from "@/components/FadeContent"
