@@ -120,8 +120,8 @@ Struktur target bukan alasan untuk memecah file secara prematur. Lakukan perpind
 
 Sebuah perubahan dianggap selesai jika:
 
-- `npm run lint` berhasil.
-- `npm run build` berhasil untuk perubahan yang memengaruhi rendering/configuration.
+- `bun run lint` berhasil.
+- `bun run build` berhasil untuk perubahan yang memengaruhi rendering/configuration.
 - Tampilan diperiksa pada mobile dan desktop.
 - Navigasi keyboard dan focus state tetap bekerja.
 - Motion aman untuk reduced-motion.

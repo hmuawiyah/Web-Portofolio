@@ -11,6 +11,23 @@ It also highlights my skills and competencies as a **Junior Web Developer**, mak
 - TypeScript
 - Tailwind CSS
 - shadcn/ui
+- Bun
+
+---
+
+## Local Development
+
+```bash
+bun install
+bun run dev
+```
+
+Build dan jalankan versi production:
+
+```bash
+bun run build
+bun run start
+```
 
 ---
 

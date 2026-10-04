@@ -71,8 +71,8 @@ AI agent tidak boleh mengarang pengalaman, sertifikat, tautan, statistik, atau i
 Setelah perubahan kode:
 
 ```bash
-npm run lint
-npm run build
+bun run lint
+bun run build
 ```
 
 Untuk perubahan visual, periksa juga:

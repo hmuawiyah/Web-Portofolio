@@ -44,14 +44,13 @@ const PersonalProject = () => {
                 {data.map((val, i) => (
                     <Card
                         key={i}
-                        className="flex w-full md:w-[48%] lg:w-[35%] flex-col justify-between py-6"
+                        className="flex w-full md:w-[48%] lg:w-[35%] flex-col justify-between pt-0 pb-6 overflow-hidden"
                     >
-
+                        <div
+                            className="w-full h-35 bg-cover"
+                            style={{ backgroundImage: `url(${val.img})` }}
+                        />
                         <CardContent className="flex flex-col overflow-hidden space-y-6">
-                            <div
-                                className="w-full h-35 bg-cover rounded-md shadow-sm border border-border"
-                                style={{ backgroundImage: `url(${val.img})` }}
-                            />
 
                             <div className="flex flex-col space-y-2">
                                 <CardTitle className="font-display font-[450] text-3xl uppercase text-primary">
