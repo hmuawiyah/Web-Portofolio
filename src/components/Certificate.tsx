@@ -172,7 +172,7 @@ const Certificate = () => {
                         <CardContent className="flex flex-col justify-between h-full">
                             <div className="flex gap-2">
                                 <div
-                                    className="hidden md:block w-10 h-10 shrink-0 bg-cover bg-center rounded-md border border-border"
+                                    className="w-10 h-10 shrink-0 bg-cover bg-center rounded-md border border-border"
                                     style={{ backgroundImage: `url('${val.icon}')` }}
                                 ></div>
                                 <div className="flex flex-col gap-2">
@@ -180,13 +180,8 @@ const Certificate = () => {
                                     <div className="text-xs font-semibold">
                                         {val.org} ({val.year})
                                     </div>
-                                    <div className="hidden md:block text-xs min-h-0!">
-                                        <span className="mr-1 text-foreground">
-                                            Credential ID:
-                                        </span>
-                                        <span className="text-foreground">
-                                            {val.id}
-                                        </span>
+                                    <div className="font-courier text-foreground text-xs min-h-0!">
+                                        Credential: {val.id}
                                     </div>
                                 </div>
                             </div>

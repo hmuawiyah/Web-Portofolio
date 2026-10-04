@@ -59,7 +59,7 @@ const PersonalProject = () => {
                         >
                             <div
                                 aria-hidden="true"
-                                className="h-56 w-full cursor-pointer bg-cover bg-center grayscale outline outline-1 -outline-offset-1 outline-black/10 transition-[filter] duration-150 group-hover:grayscale-0"
+                                className="h-56 w-full cursor-pointer bg-cover grayscale outline -outline-offset-1 outline-black/10 transition-[filter] duration-150 group-hover:grayscale-0"
                                 style={{ backgroundImage: `url(${val.img})` }}
                             />
                         </Link>
