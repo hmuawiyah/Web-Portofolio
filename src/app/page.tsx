@@ -14,11 +14,11 @@ export default function Home() {
         <Hero />
       </section>
 
-      <section id="project" aria-label="Personal projects" className="flex w-full scroll-mt-24 justify-center pt-24 md:pt-32">
+      <section id="project" aria-label="Personal projects" className="flex w-full scroll-mt-2 justify-center pt-28 md:pt-20">
         <PersonalProject />
       </section>
 
-      <section id="experience" aria-label="Experience" className="flex w-full scroll-mt-24 justify-center pt-24 md:pt-32">
+      <section id="experience" aria-label="Experience" className="flex w-full scroll-mt-2 justify-center pt-24 md:pt-20">
         <Experience />
       </section>
 
@@ -26,20 +26,20 @@ export default function Home() {
         <Skills />
       </section>
 
-      <section id="certificate" aria-label="Certificates" className="flex w-full scroll-mt-24 justify-center pt-24 md:pt-32">
+      <section id="certificate" aria-label="Certificates" className="flex w-full scroll-mt-2 justify-center pt-24 md:pt-20">
         <Certificate />
       </section>
 
-      <section id="whaticando" aria-label="Services" className="flex w-full scroll-mt-24 justify-center pt-24">
+      <section id="whaticando" aria-label="Services" className="flex w-full scroll-mt-2 justify-center pt-20">
         <WhatICanDo />
       </section>
 
-      <section id="getInTouch" aria-label="Contact" className="flex w-full scroll-mt-24 justify-center pt-24">
+      <section id="getInTouch" aria-label="Contact" className="flex w-full scroll-mt-2 justify-center pt-20">
         <GetInTouch />
       </section>
 
-      <footer className="w-full pt-28 md:w-[80%]">
-        <p className="mb-5 text-right text-sm text-black/50">© {new Date().getFullYear()} Husein&apos;s Web App Portfolio</p>
+      <footer className="w-full max-w-6xl pt-28">
+        <p className="mb-5 border-t-2 border-foreground/15 pt-5 text-right text-sm text-muted-foreground">© 2026 Husein&apos;s Web App Portfolio</p>
       </footer>
 
     </main>

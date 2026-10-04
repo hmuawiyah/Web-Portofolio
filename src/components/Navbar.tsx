@@ -15,19 +15,17 @@ const Navbar = () => {
 
   return (
     // <div className="flex w-full justify-center items-center">
-    <nav aria-label="Primary navigation" suppressHydrationWarning className="
-    fixed flex justify-between md:justify-center items-end w-full px-7 md:px-10 h-18 md:p-0 z-50 
-    bg-gradient-to-b from-white from-0% to-transparent to-60% 
-    ">
+    <nav aria-label="Primary navigation" suppressHydrationWarning className="fixed inset-x-0 top-0 z-50 flex justify-center px-5 pt-4 md:px-10">
+      <div aria-hidden="true" className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-linear-to-b from-background from-15% to-transparent" />
       <div suppressHydrationWarning className="
-      flex justify-between md:justify-center items-center gap-5 bg-white
-      h-13 w-full md:w-fit shadow-md px-5 rounded-full border border-border/50
+      relative z-10 flex w-fit items-center justify-center gap-1 bg-background
+      h-14 px-3 md:gap-3 md:px-5 rounded-none border border-foreground
       ">
-        <Button variant={"secondary"} className="text-sm font-semibold pl-0 md:pl-4 bg-transparent hover:bg-secondary" onClick={() => handleNavigate("home")}><PiHouseDuotone /> Home</Button>
-        <Button variant={"secondary"} className="hidden text-sm font-semibold md:flex bg-transparent hover:bg-secondary" onClick={() => handleNavigate("experience")}><PiSuitcaseSimpleDuotone /> Experience</Button>
-        <Button variant={"secondary"} className="hidden text-sm font-semibold md:flex bg-transparent hover:bg-secondary" onClick={() => handleNavigate("project")}><PiFolderSimpleDuotone /> Project</Button>
-        <Button variant={"secondary"} className="hidden text-sm font-semibold md:flex bg-transparent hover:bg-secondary" onClick={() => handleNavigate("certificate")}><PiCertificateDuotone />Certificate</Button>
-        <Button variant={"default"} size={"sm"} className="text-xs font-bold rounded-lg" onClick={() => handleNavigate("getInTouch")}><PiPhoneDuotone /> Get in touch</Button>
+        <Button variant="ghost" className="text-sm hover:bg-primary hover:text-primary-foreground" onClick={() => handleNavigate("home")}><PiHouseDuotone /> Home</Button>
+        <Button variant="ghost" className="hidden text-sm hover:bg-primary hover:text-primary-foreground md:flex" onClick={() => handleNavigate("project")}><PiFolderSimpleDuotone /> Projects</Button>
+        <Button variant="ghost" className="hidden text-sm hover:bg-primary hover:text-primary-foreground md:flex" onClick={() => handleNavigate("experience")}><PiSuitcaseSimpleDuotone /> Experience</Button>
+        <Button variant="ghost" className="hidden text-sm hover:bg-primary hover:text-primary-foreground md:flex" onClick={() => handleNavigate("certificate")}><PiCertificateDuotone /> Certificates</Button>
+        <Button variant="default" size="sm" className="text-xs" onClick={() => handleNavigate("getInTouch")}><PiPhoneDuotone /> Get in touch</Button>
       </div>
     </nav>
   )

@@ -1,31 +1,32 @@
 # Design System
 
-Dokumen ini menjadi acuan visual portofolio Husein Muawiyah. Tujuannya adalah mempertahankan karakter yang bersih, ramah, dan memakai aksen oranye dengan surface solid, kedalaman lembut, serta motion yang tenang.
+Dokumen ini menjadi acuan visual portofolio Husein Muawiyah. Identitasnya menggabungkan Swiss editorial layout, grid modular, tipografi oversize, dan palet electric blue–orange di atas neutral paper untuk memberi kesan terstruktur, tajam, dan eksperimental.
 
 ## Prinsip desain
 
-1. **Konten tetap utama.** Surface dan dekorasi harus membantu hierarki, bukan mengambil perhatian dari isi.
-2. **Terasa ringan.** Gunakan ruang kosong, border tipis, dan shadow berlapis dengan opacity rendah.
-3. **Konsisten.** Gunakan token dan komponen yang tersedia sebelum menambah nilai baru.
+1. **Grid sebagai struktur.** Setiap section mengikuti kolom dan garis alignment yang konsisten.
+2. **Hierarki yang berani.** Tipografi oversize dan perbedaan skala membentuk urutan baca utama.
+3. **Asimetri yang terukur.** Komposisi boleh tidak simetris selama tetap menempel pada grid modular.
 4. **Aksesibel.** Teks harus terbaca di atas material transparan, navigasi dapat digunakan dengan keyboard, dan motion menghormati preferensi pengguna.
 5. **Responsif sejak awal.** Desain dimulai dari mobile lalu ditingkatkan untuk layar lebih besar.
 
 ## Identitas visual
 
-- Primary: `#ff7024`, dipakai untuk CTA, judul penting, dan highlight.
-- Page background: `#f9fafb`.
-- Component background: putih melalui token `--card` dan `--background`.
-- Foreground: `#2d2d2d`.
-- Ambient blue: `#27bef5`, hanya sebagai gradient latar ber-opacity rendah.
-- Surface: warna solid dengan border neutral tipis dan shadow lembut.
+- Primary electric blue: `#064bdc`, dipakai untuk CTA, headline, blok identitas, dan interactive emphasis.
+- Optional orange: `#f5a300`, disimpan sebagai primitive `--orange-500` untuk penggunaan manual dan belum dipetakan ke komponen.
+- Page background: paper gray `#efefeb`.
+- Component background: `#f7f6f0` melalui token `--card`.
+- Foreground: near-black `#121212`.
+- Surface: warna solid, garis hitam, radius minimal, dan tanpa shadow dekoratif.
 
-Hindari memakai primary pada area yang terlalu luas. Oranye paling efektif sebagai aksen, bukan sebagai warna dasar seluruh halaman.
+Gunakan biru untuk identitas dan aksi utama. Oranye tersedia sebagai warna opsional, tetapi tidak diterapkan otomatis melalui token komponen. Informasi tidak boleh dibedakan melalui warna saja.
 
 ## Tipografi
 
 - Body dan UI: Geist Sans melalui `next/font`.
 - Monospace: Geist Mono, hanya untuk konten teknis.
-- Display: Oswald untuk nama, judul project, dan heading ekspresif.
+- Display: Archivo Black untuk hero, judul section, dan heading ekspresif.
+- Handwriting accent: Allura Regular melalui `next/font`, khusus untuk headline signature pada Hero. Allura berlisensi SIL Open Font License.
 - Body minimum: `14px` pada mobile; `16px` lebih disukai untuk paragraf panjang.
 - Gunakan sentence case untuk UI. Uppercase hanya untuk display heading pendek.
 
@@ -39,11 +40,11 @@ Hindari memakai primary pada area yang terlalu luas. Oranye paling efektif sebag
 
 ## Radius, border, dan shadow
 
-- Control kecil: `rounded-md` sampai `rounded-lg`.
-- Card: `rounded-2xl`.
-- Navbar/floating control: `rounded-full`.
-- Border: 1px, tipis dan berkontras rendah.
-- Gunakan shadow ringan seperti `shadow-sm` untuk card dan `shadow-md` untuk elemen floating seperti navbar.
+- Control kecil: `rounded-sm`.
+- Card dan blok editorial: `rounded-sm` atau tanpa radius.
+- Navbar: tanpa radius agar menyatu dengan grid.
+- Border: 1px hitam untuk menyatakan struktur dan pembagian kolom.
+- Hindari shadow dekoratif; gunakan garis, ruang kosong, dan blok warna untuk depth.
 - Border digunakan untuk memperjelas struktur dan batas antarsurface.
 - Jangan memakai `backdrop-filter`, surface translucent, atau glassmorphism tanpa keputusan desain baru yang eksplisit.
 
@@ -61,11 +62,11 @@ Setiap icon-only button wajib memiliki `aria-label`. Semua state harus terlihat 
 
 ### Card
 
-Card memakai background solid, `rounded-xl`, border neutral, dan `shadow-sm`. Isi card harus tetap memiliki hierarki yang jelas tanpa bergantung pada dekorasi berlebihan.
+Card memakai background solid, radius minimal, border hitam, dan tanpa shadow. Dalam kumpulan card, gunakan gap 1px dengan background hitam agar garis tetap konsisten.
 
 ### Navigation
 
-Navbar bersifat floating dengan background putih solid, border lembut, dan `shadow-md`. Pada mobile, tampilkan hanya aksi terpenting. Setiap target navigasi harus berupa section semantik dengan ID stabil.
+Navbar berupa bar paper-gray berborder dengan lebar mengikuti isi. Lapisan gradient full-screen di bawah navbar membuat konten memudar saat mencapai ujung atas layar. Pada mobile, tampilkan hanya aksi terpenting.
 
 ### Media
 
@@ -92,6 +93,6 @@ Gunakan `next/image` untuk foto, logo, dan screenshot informatif. Selalu isi `al
 
 ## Do / Don't
 
-**Do:** gunakan surface solid, pertahankan whitespace, bedakan elevasi secara halus, dan gunakan primary sebagai aksen.
+**Do:** gunakan grid modular, alignment bersama, whitespace, blok cobalt, dan metadata kecil untuk mendukung tipografi utama.
 
-**Don't:** menambahkan glassmorphism, memakai shadow hitam berat, membuat radius berbeda-beda tanpa alasan, atau menambahkan motion tanpa reduced-motion fallback.
+**Don't:** menambahkan glassmorphism, shadow dekoratif, radius besar, komposisi yang lepas dari grid, atau motion tanpa reduced-motion fallback.

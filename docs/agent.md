@@ -9,7 +9,7 @@ Proyek adalah portofolio satu halaman milik Husein Muawiyah. Tujuan utamanya ada
 Prioritas produk:
 
 1. Informasi faktual dan mudah dipindai.
-2. Tampilan profesional dengan surface solid dan identitas oranye yang konsisten.
+2. Tampilan Swiss editorial dengan grid modular, neutral paper, dan electric blue yang konsisten; orange tersedia sebagai warna opsional.
 3. Responsive, accessible, dan cepat.
 4. Kode mudah dipahami oleh pemilik proyek di masa depan.
 
@@ -51,7 +51,7 @@ AI agent tidak boleh mengarang pengalaman, sertifikat, tautan, statistik, atau i
 ## Aturan desain
 
 - Ikuti `docs/design-system.md`.
-- Pertahankan primary orange dan karakter visual bersih.
+- Pertahankan primary electric blue, neutral paper, grid modular, serta karakter Swiss editorial yang tegas. Jangan terapkan primitive orange ke komponen tanpa keputusan eksplisit.
 - Gunakan surface solid; jangan menambahkan glassmorphism atau backdrop blur tanpa persetujuan pemilik proyek.
 - Gunakan token; hindari hardcoded color/radius baru tanpa alasan.
 - Semua interaction memiliki hover dan focus-visible state.
@@ -96,6 +96,6 @@ Laporan akhir sebaiknya ringkas dan mencakup:
 
 ## Contoh permintaan yang baik
 
-> Baca docs terlebih dahulu. Tambahkan satu project baru dari data yang saya berikan, pertahankan surface solid dan identitas oranye, gunakan komponen yang ada, lalu jalankan lint dan build. Jangan mengubah section lain.
+> Baca docs terlebih dahulu. Tambahkan satu project baru dari data yang saya berikan, pertahankan grid Swiss dan identitas blue–orange, gunakan komponen yang ada, lalu jalankan lint dan build. Jangan mengubah section lain.
 
 > Audit aksesibilitas navbar dan contact section. Perbaiki masalah yang ditemukan tanpa mengubah identitas visual, lalu jelaskan hasil verifikasinya.
