@@ -1,6 +1,6 @@
 
 import type { Metadata } from "next"
-import { Allura, Geist, Geist_Mono } from "next/font/google"
+import { Allura, Courier_Prime, Geist, Geist_Mono } from "next/font/google"
 import "./globals.css"
 import Navbar from "@/components/Navbar"
 import { SoftGradient } from "@/components/SoftGradient"
@@ -19,6 +19,12 @@ const allura = Allura({
   variable: "--font-allura",
   subsets: ["latin"],
   weight: "400",
+})
+
+const courierPrime = Courier_Prime({
+  variable: "--font-courier-prime",
+  subsets: ["latin"],
+  weight: ["400", "700"],
 })
 
 export const metadata: Metadata = {
@@ -41,7 +47,7 @@ export default function RootLayout({
       </head>
 
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${allura.variable} antialiased bg-background`}
+        className={`${geistSans.variable} ${geistMono.variable} ${allura.variable} ${courierPrime.variable} antialiased bg-background`}
       >
         <Navbar />
 
