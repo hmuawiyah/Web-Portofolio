@@ -45,9 +45,9 @@ const MarqueeRow = ({ words, direction = "left", speed = "normal" }: MarqueeRowP
                 {items.map((word, i) => (
                     <span
                         key={i}
-                        className="inline-flex items-center rounded-lg border border-border bg-background 
-                        px-5 py-2.5 text-xs md:text-sm font-medium text-foreground transition-colors 
-                        hover:border-primary/40 hover:text-primary whitespace-nowrap select-none"
+                        className="inline-flex items-center whitespace-nowrap rounded-none border border-foreground bg-card
+                        px-5 py-2.5 text-xs font-bold uppercase tracking-[0.08em] text-foreground transition-colors
+                        hover:bg-primary hover:text-primary-foreground md:text-sm"
                     >
                         {word}
                     </span>
@@ -60,7 +60,7 @@ const MarqueeRow = ({ words, direction = "left", speed = "normal" }: MarqueeRowP
 const Skills = () => {
     return (
         <FadeContent
-            className="w-full md:w-[70%]"
+            className="w-full max-w-5xl"
         >
 
             <div className="w-full space-y-1">

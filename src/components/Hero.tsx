@@ -1,11 +1,4 @@
 "use client"
-import {
-    Card,
-    CardContent,
-    CardDescription,
-    CardHeader,
-    CardTitle,
-} from "@/components/ui/card"
 import { FaLinkedinIn } from "react-icons/fa"
 import { RiInstagramFill } from "react-icons/ri"
 import { SiGithub } from "react-icons/si"
@@ -17,66 +10,81 @@ import FadeContent from "@/components/FadeContent"
 
 const Hero = () => {
 
-    const textContent = `Build and maintain end-to-end full-stack web applications 
-    using JavaScript, TypeScript, React, Next.js, and Express, with experience in 
-    RESTful APIs and SQL/NoSQL databases. Strong understanding of UI/UX, web design,
-    and SEO, supported by 2 years of design experience, enabling the delivery of 
-    functional, user-friendly, and visually consistent products.`
+    const textContent = `I build and maintain end-to-end web applications with JavaScript, TypeScript, React, Next.js, and Express. My background in visual design helps me turn complex requirements into accessible, responsive, and visually consistent products.`
 
     return (
-        <FadeContent
-            className="flex flex-col gap-2 justify-center items-center w-full md:w-[80%]"
-        >
-
-            <div
-                className="
-                    relative flex justify-center items-center border shadow-sm
-                    rounded-full w-[45%] xl:w-[19%] h-fit aspect-1/1
-                ">
-                <div className="absolute inset-0 bg-[url(/me-3.jpg)] bg-size-[150%] bg-position-[50%_60%] rounded-full"></div>
-                {false && (<div className="absolute inset-0 bg-linear-to-t from-black/20 from-0% to-transparent to-80% rounded-full"></div>)}
-                {true && (<div className="absolute inset-0 bg-[url(/openToWork.png)] bg-cover rounded-full"></div>)}
+        <FadeContent className="w-full max-w-6xl border border-foreground bg-background">
+            <div className="flex items-center justify-between border-b border-foreground px-4 py-3 font-mono text-xs font-bold uppercase tracking-[0.12em]">
+                <span>Portfolio / 2026</span>
+                <span className="hidden sm:inline">Web development</span>
             </div>
 
-            <div className="flex flex-col w-full lg:w-[75%] gap-5 bg-transparent">
-                <div className="flex flex-col gap-6 justify-center items-center border-0 shadow-none bg-transparent">
-                    <div className="flex flex-col items-center w-full gap- md:gap-3">
-                        <div className="text-4xl md:text-5xl font-display font-[450] text-center text-primary uppercase">Husein Muawiyah</div>
-                        <div className="text-lg md:text-xl font-[500] text-foreground">
-                            Junior Web Developer
+            {/* <div className="grid md:grid-cols-[minmax(0,1fr)_18rem] lg:grid-cols-[minmax(0,1fr)_22rem]"> */}
+            <div className="grid md:grid-cols-[minmax(0,1fr)_18rem] lg:grid-cols-[minmax(0,1fr)_18rem]">
+                <div className="flex flex-col justify-between p-5 sm:p-6 md:p-8 lg:p-10">
+                    <div>
+                        <div className="flex items-center justify-between gap-4">
+                            <span className="section-kicker">Husein Muawiyah</span>
+                            {/* Mobile-only avatar photo */}
+                            <div
+                                className="h-16 w-16 shrink-0 overflow-hidden rounded-full border border-foreground bg-primary md:hidden"
+                                role="img"
+                                aria-label="Photo of Husein Muawiyah"
+                            >
+                                <div className="h-full w-full bg-[url(/me-3.jpg)] bg-cover bg-[position:50%_35%]" />
+                            </div>
                         </div>
-                        <div className="
-                                flex justify-center items-center text-sm md:text-base py-1 px-3 rounded-md
-                                bg-background border border-border font-[500] text-black/80 shadow-md 
-                            "><PiMapPinLineDuotone className="text-sm md:text-base mr-2" />Bekasi, Indonesia</div>
+
+                        <h1
+                            className="mt-4 sm:mt-6 text-[clamp(2.5rem,6.5vw,5rem)] font-display uppercase font-normal leading-[0.9] sm:leading-[0.85] tracking-tight text-primary"
+                        >
+                            Making Function <br className="hidden sm:inline" />
+                            Feel Beautiful
+                        </h1>
                     </div>
 
-                    <div className="flex justify-center text-foreground text-center text-xs md:text-base font-medium w-[320] md:w-[580]">
-                        {textContent}
+                    <div className="mt-8 sm:mt-10 grid gap-6 border-t border-foreground pt-6 lg:grid-cols-[0.75fr_1.25fr]">
+                        <div>
+                            <p className="text-lg sm:text-xl font-bold leading-tight">Full-stack developer</p>
+                            <div className="mt-3 sm:mt-4 flex items-center text-sm font-bold text-foreground">
+                                <PiMapPinLineDuotone className="me-2 h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
+                                <span>Bekasi, Indonesia</span>
+                            </div>
+                        </div>
+                        <p className="max-w-[60ch] text-sm leading-relaxed text-muted-foreground md:text-base">{textContent}</p>
                     </div>
 
-                    <div className="flex justify-center items-center gap-0">
-                        <Button variant={"social"} className="w-12 h-auto aspect-1/1" asChild>
-                            <Link href={"https://www.linkedin.com/in/husein-muawiyah/"} target="_blank" aria-label="LinkedIn profile">
-                                <FaLinkedinIn className="w-5! md:w-6! h-auto! aspect-1/1" />
+                    <div className="mt-6 flex flex-wrap gap-3">
+                        <Button variant={"social"} size="icon" className="h-11 w-11 min-h-[44px] min-w-[44px]" asChild>
+                            <Link href={"https://www.linkedin.com/in/husein-muawiyah/"} target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Profile">
+                                <FaLinkedinIn className="h-5 w-5" />
                             </Link>
                         </Button>
-                        <Button variant={"social"} className="w-12 h-auto aspect-1/1" asChild>
-                            <Link href={"https://github.com/hmuawiyah"} target="_blank" aria-label="GitHub profile">
-                                <SiGithub className="w-5! md:w-6! h-auto! aspect-1/1" />
+                        <Button variant={"social"} size="icon" className="h-11 w-11 min-h-[44px] min-w-[44px]" asChild>
+                            <Link href={"https://github.com/hmuawiyah"} target="_blank" rel="noopener noreferrer" aria-label="GitHub Profile">
+                                <SiGithub className="h-5 w-5" />
                             </Link>
                         </Button>
-                        <Button variant={"social"} className="w-12 h-auto aspect-1/1" asChild>
-                            <Link href={"mailto:huseinmuawiyah@gmail.com"} aria-label="Send an email">
-                                <MdEmail className="w-6! md:w-7! h-auto! aspect-1/1" />
+                        <Button variant={"social"} size="icon" className="h-11 w-11 min-h-[44px] min-w-[44px]" asChild>
+                            <Link href={"mailto:huseinmuawiyah@gmail.com"} aria-label="Send Email to Husein">
+                                <MdEmail className="h-5 w-5" />
                             </Link>
                         </Button>
-                        <Button variant={"social"} className="w-12 h-auto aspect-1/1" asChild>
-                            <Link href={"https://www.instagram.com/huseinmuawiyah/"} target="_blank" aria-label="Instagram profile">
-                                <RiInstagramFill className="w-6! md:w-7! h-auto! aspect-1/1" />
+                        <Button variant={"social"} size="icon" className="h-11 w-11 min-h-[44px] min-w-[44px]" asChild>
+                            <Link href={"https://www.instagram.com/huseinmuawiyah/"} target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile">
+                                <RiInstagramFill className="h-5 w-5" />
                             </Link>
                         </Button>
                     </div>
+                </div>
+
+                {/* Desktop photo column */}
+                <div className="relative hidden overflow-hidden border-s border-foreground bg-primary md:block">
+                    <div
+                        className="absolute inset-0 bg-[url(/me-3.jpg)] bg-cover bg-[position:50%_42%]"
+                        role="img"
+                        aria-label="Photo of Husein Muawiyah"
+                    />
                 </div>
             </div>
         </FadeContent>

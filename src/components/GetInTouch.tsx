@@ -10,60 +10,29 @@ const GetInTouch = () => {
 
     return (
         <FadeContent
-            className="w-full md:w-[80%] relative"
+            className="relative w-full max-w-6xl"
         >
-            <div className="bg-primary flex flex-col justify-center items-center p-9 md:p-15 rounded-xl relative overflow-hidden">
-
-                <div className="absolute inset-0 z-0 pointer-events-none">
-                    <div
-                        className="hidden md:block absolute inset-0 w-full h-full"
-                        style={{
-                            background: `
-                                radial-gradient(ellipse at 50% 8%, 
-                                #FF9224 20%, 
-                                #FF922450 45%, 
-                                #FF922400 60%) 
-                        `,
-                        }}
-                    />
-                    <div
-                        className="block md:hidden absolute inset-0 w-full h-full"
-                        style={{
-                            background: `
-                                radial-gradient(circle at 50% 3%, 
-                                #FF9224 15%, 
-                                #FF922450 30%, 
-                                #FF922400 45%) 
-                            `,
-                        }}
-                    />
-                </div>
-
-                <div className="text-center font-display font-[450] text-background uppercase text-3xl md:text-5xl mb-4 relative z-10">Get in touch</div>
-                <p className=" text-center font-medium text-background text-lg md:text-xl w-full md:w-130 leading-6 mb-15 relative z-10">
-                    Want to connect? Feel free to reach out anytime
+            <div className="selection-inverse relative grid overflow-hidden border-2 border-foreground bg-primary md:grid-cols-12">
+                <div className="border-b border-primary-foreground/40 p-6 md:col-span-8 md:border-b-0 md:border-e md:p-12">
+                <span className="section-kicker relative z-10 mb-8 text-primary-foreground">05 / Let&apos;s collaborate</span>
+                <h2 className="section-title relative z-10 mb-6 text-primary-foreground">Have an idea? Let&apos;s build it.</h2>
+                <p className="relative z-10 max-w-xl text-base font-medium leading-relaxed text-primary-foreground/80 md:text-xl">
+                    Reach out for a project, collaboration, or a thoughtful conversation about the web.
                 </p>
-                <div className="flex flex-wrap lg:flex-nowrap justify-between gap-1 md:gap-5 relative z-10">
+                </div>
+                <div className="relative z-10 grid grid-cols-2 md:col-span-4 md:grid-cols-1">
 
-                    <div className="lg:w-1/4 h-15" >
-                        <Link href={'https://www.linkedin.com/in/husein-muawiyah/'} target="_blank">
-                            <Button variant={"link"} className="text-background text-sm md:text-xl font-semibold"><FaLinkedinIn className="w-6! h-6!" /><span className="hidden md:block">Linkedin</span></Button>
-                        </Link>
+                    <div className="border-b border-e border-primary-foreground/40 md:border-e-0" >
+                        <Button variant="link" className="min-h-20 h-full w-full justify-start rounded-none px-4 py-4! text-primary-foreground text-sm md:text-xl font-semibold hover:bg-primary-foreground hover:text-primary" asChild><Link href="https://www.linkedin.com/in/husein-muawiyah/" target="_blank" rel="noreferrer"><FaLinkedinIn className="size-6!" /><span>LinkedIn</span></Link></Button>
                     </div>
-                    <div className="lg:w-1/4 h-15">
-                        <Link href={'https://github.com/hmuawiyah'} target="_blank">
-                            <Button variant={"link"} className="text-background text-sm md:text-xl font-semibold"><SiGithub className="w-6! h-6!" /><span className="hidden md:block">Github</span></Button>
-                        </Link>
+                    <div className="border-b border-primary-foreground/40">
+                        <Button variant="link" className="min-h-20 h-full w-full justify-start rounded-none px-4 py-4! text-primary-foreground text-sm md:text-xl font-semibold hover:bg-primary-foreground hover:text-primary" asChild><Link href="https://github.com/hmuawiyah" target="_blank" rel="noreferrer"><SiGithub className="size-6!" /><span>GitHub</span></Link></Button>
                     </div>
-                    <div className="lg:w-1/4 h-15">
-                        <Link href={'mailto:huseinmuawiyah@gmail.com'} target="_blank">
-                            <Button variant={"link"} className="text-background text-sm md:text-xl font-semibold"><MdEmail className="w-7! h-7!" /><span className="hidden md:block">Email</span></Button>
-                        </Link>
+                    <div className="border-e border-primary-foreground/40 md:border-e-0 md:border-b">
+                        <Button variant="link" className="min-h-20 h-full w-full justify-start rounded-none px-4 py-4! text-primary-foreground text-sm md:text-xl font-semibold hover:bg-primary-foreground hover:text-primary" asChild><Link href="mailto:huseinmuawiyah@gmail.com"><MdEmail className="size-7!" /><span>Email</span></Link></Button>
                     </div>
-                    <div className="lg:w-1/4 h-15">
-                        <Link href={'https://www.instagram.com/huseinmuawiyah/'} target="_blank">
-                            <Button variant={"link"} className="text-background text-sm md:text-xl font-semibold"><RiInstagramFill className="w-7! h-7!" /><span className="hidden md:block">Instagram</span></Button>
-                        </Link>
+                    <div>
+                        <Button variant="link" className="min-h-20 h-full w-full justify-start rounded-none px-4 py-4! text-primary-foreground text-sm md:text-xl font-semibold hover:bg-primary-foreground hover:text-primary" asChild><Link href="https://www.instagram.com/huseinmuawiyah/" target="_blank" rel="noreferrer"><RiInstagramFill className="size-7!" /><span>Instagram</span></Link></Button>
                     </div>
                 </div>
             </div>

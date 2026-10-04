@@ -141,15 +141,18 @@ const Certificate = () => {
 
     return (
         <FadeContent
-            className="w-full md:w-[80%]"
+            className="w-full max-w-6xl"
         >
-            <div className="font-semibold text-2xl mb-4">
-                Certificates
+            <div className="mb-8 grid grid-cols-4 items-end border-b-2 border-foreground pb-5 md:grid-cols-12">
+                <div className="col-span-4 grid grid-cols-4 md:col-span-10 md:grid-cols-10">
+                    <span className="section-kicker col-span-2">03 / Credentials</span>
+                    <h2 className="section-title col-span-4 mt-8 text-primary md:col-span-8 md:col-start-3 md:mt-0">Certificates</h2>
+                </div>
 
                 <Button variant={'default'} size={'sm'} onClick={() => setIsMore(!isMore)}
                     aria-label={isMore ? "Show fewer certificates" : "Show more certificates"}
                     aria-expanded={isMore} aria-controls="certificate-list"
-                    className="ml-2 p-0! h-6! w-6!">
+                    className="col-span-1 col-start-4 size-11! justify-self-end p-0! md:col-start-12">
 
                     <FaAngleUp className={`transition-all duration-300
                         ${isMore
@@ -165,7 +168,7 @@ const Certificate = () => {
             ${isMore ? "max-h-[5000px]" : "max-h-[350px] md:max-h-[210px]"}`}>
 
                 {data.map((val) => (
-                    <Card key={val.id} className="w-full h-35 md:h-45 gap-0 py-4">
+                    <Card key={val.id} className="h-40 w-full gap-0 rounded-none py-4 md:h-48">
                         <CardContent className="flex flex-col justify-between h-full">
                             <div className="flex gap-2">
                                 <div
@@ -173,7 +176,7 @@ const Certificate = () => {
                                     style={{ backgroundImage: `url('${val.icon}')` }}
                                 ></div>
                                 <div className="flex flex-col gap-2">
-                                    <CardTitle className="text-sm text-primary font-semibold">{val.title}</CardTitle>
+                                    <CardTitle className="text-sm font-bold leading-snug text-primary">{val.title}</CardTitle>
                                     <div className="text-xs font-semibold">
                                         {val.org} ({val.year})
                                     </div>
